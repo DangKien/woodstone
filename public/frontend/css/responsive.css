@@ -1,0 +1,409 @@
+.service_bx ul li {position: relative;}
+.service_bx ul li figure {position: absolute; right: 10px;}
+
+@media screen and (min-width:1170px) and (max-width:1365px){
+.navigation_area .navbar-nav a{padding:40px 14px}
+.navigation_area .cart_area div{font-size:12px}
+.navigation_area .cart_area{padding:30px 8px}
+.service_bx ul li{padding:4% 1%}
+.welcome_area .welcome_rht{background-size:50% auto; height:500px}
+.categories_area ul li .cat_overlay h4{font-size:20px}
+.category_tab_area .cat_item{width:217px; float:none; display:inline-block}
+.client_logo_area ul li{width:170px}
+
+.cnct_wrapper .cnct_section1{text-align:center}
+.cnct_wrapper .cnct_section1 li{width:32%; margin-right:0px; text-align:center; max-width:300px; display:inline-block}
+.cnct_wrapper .cnct_section1 li .cnct_des{width:100%}
+.cnct_wrapper .cnct_section1 li figure{display:inline-block; float:none; margin-right:0px}
+
+.blog_detail_wrapper .blog_lft{width:70%}
+.side_bar{width:27%}
+
+.productDesWrapper .blog_lft{width:100%}
+
+.compare_wrapper .additional_row2 .aditional_info_bx li span{margin-right:0px}
+}
+
+/*993px to 1169px start here*/
+@media screen and (min-width:993px) and (max-width:1169px){
+.navigation_area .navbar-nav a{padding:40px 18px; font-size:12px;}
+.navigation_area .cart_area div{font-size:14px; float:none}
+.navigation_area .cart_area{padding:5px; text-align:center; }
+.navigation_area .cart_area h4{float:none; display:inline-block}
+
+.slider_area .carousel-caption .slide_overlay1{padding-top:20px}
+.slider_area .carousel-caption .slide_overlay1 h4{left:inherit; right:-18%; top:3%}
+
+.service_bx{height:auto;}
+.service_bx ul li{width:50%; position: relative; padding: 4% 0% 0% 4%;}
+.service_bx ul li figure {position: absolute; right: 10px;}
+
+.welcome_area .welcome_lft{padding:0px 20px}
+.welcome_area .welcome_rht{background-size:50% auto; height:588px;}
+.welcome_area .welcome_lft ul li{width:100%}
+
+.categories_area{text-align:center}
+.categories_area ul li{width:32.33%; float:none; display:inline-block; margin-bottom:50px; max-width:290px; background:none}
+
+.category_tab_area .cat_item{float:none; display:inline-block; width:215px}
+
+.home_review_area .home_review_slider .item figure{width:150px; height:150px;}
+.home_review_head .site-section-area h2{ font-size:25px}
+.home_review_area .home_review_slider #quote-carousel .carousel-control.left{left:-174px}
+.home_review_area .home_review_slider #quote-carousel .carousel-control.right{left:-113px}
+
+
+.home_offer_area .offer_section .fruit_des h2{font-size:18px}
+
+.recent_news_area .carousel-indicators li{width:76px; height:66px}
+.recent_news_area .news_cnt{margin:0px}
+.recent_news_area .news_cnt .news_slider_txt{padding:0px}
+
+.client_logo_area ul li{width:18%; padding:0px 10px}
+
+.copyright_area{top:0px; padding:15px 0px; text-align:center}
+footer .footer_area .footer_bx1{padding:0px 20px}
+
+.blog_page .news_cnt{left:0px; margin-bottom:30px}
+.recent_news_area .news_cnt .news_slider_img{left:0px; margin-right:0px; text-align:center}
+
+/*cart page css here*/
+.cart_wrapper table tr td .cart_des{width:67%}
+
+.cnct_wrapper .cnct_section1 li{width:32%; margin-right:0px; text-align:center}
+.cnct_wrapper .cnct_section1 li .cnct_des{width:100%}
+.cnct_wrapper .cnct_section1 li figure{display:inline-block; float:none; margin-right:0px}
+
+.blog_detail_wrapper .blog_lft{width:70%}
+.side_bar{width:27%}
+
+.productDesWrapper .blog_lft{width:100%}
+.productDesWrapper .side_bar{width:293px}
+.product_list_view .product_list_des ul li:first-child a{padding:0px 20px}
+
+.compare_wrapper .additional_row2 .aditional_info_bx li span{margin-right:0px}
+}
+/*993px to 1169px end here*/
+
+/*768px to 992px start here*/
+@media screen and (min-width:768px) and (max-width:992px){
+.navigation_area .navbar-nav a{padding:40px 8px; font-size:12px;}
+.navigation_area .cart_area div{font-size:14px;}
+.navigation_area .cart_area{padding:5px; text-align:center; }
+.navigation_area .cart_area h4{float:none; display:inline-block}
+
+.slider_area .carousel-caption .slide_overlay1{padding-top:20px}
+.slider_area .carousel-caption .slide_overlay1 h4{left:inherit; right:-18%; top:3%}
+
+.service_bx{height:auto;}
+.service_bx ul li{width:100%}
+.service_bx ul li:nth-child(2) {
+	padding: 4% 10% 0% 10%
+}
+
+.welcome_area .welcome_lft{padding:0px 20px}
+.welcome_area .welcome_rht{background-size:50% auto; height:588px;}
+.welcome_area .welcome_lft ul li{width:100%}
+
+.categories_area{text-align:center}
+.categories_area ul li{width:32.33%; float:none; display:inline-block; margin-bottom:50px}
+
+.category_tab_area .cat_item{float:none; display:inline-block}
+
+.home_review_area .container{ width:736px}
+.home_review_area .home_review_slider .item figure{width:150px; height:150px;}
+.home_review_head .site-section-area h2{ font-size:25px}
+.home_review_area .home_review_slider #quote-carousel .carousel-control.left{left:-174px}
+.home_review_area .home_review_slider #quote-carousel .carousel-control.right{left:-113px}
+
+
+.home_offer_area .offer_section .fruit_des h2{font-size:18px}
+
+.recent_news_area .carousel-indicators li{width:76px; height:66px}
+.recent_news_area .news_cnt{margin:0px}
+.recent_news_area .news_cnt .news_slider_txt{padding:0px}
+
+.client_logo_area ul li{width:18%; padding:0px 10px}
+
+.copyright_area{top:0px; padding:15px 0px; text-align:center}
+footer .footer_area .footer_bx1{padding:0px 20px}
+
+.blog_page .news_cnt{left:0px; margin:10px}
+.recent_news_area .news_cnt .news_slider_img{left:0px; margin-right:0px; text-align:center}
+
+/*cart page css here*/
+.cart_wrapper table tr th{padding:16px 10px !important}
+.cart_wrapper table tr td{padding:16px 10px}
+.cart_wrapper table tr td .cart_des h4{margin:3px 0px}
+.cart_wrapper table tr td .cart_des{width:60%}
+.cart_wrapper table tr td .cart_des h5 span{display:block; margin:5px 0px 0px}
+.cart_wrapper table tr:last-child td .spn1{margin:16px 6px}
+
+.cnct_wrapper .cnct_frm .site-section-area{text-align:center}
+.cnct_wrapper .cnct_frm{text-align:center}
+.cnct_wrapper .cnct_section1 li{width:32%; margin-right:0px; text-align:center}
+.cnct_wrapper .cnct_section1 li .cnct_des{width:100%}
+.cnct_wrapper .cnct_section1 li figure{display:inline-block; float:none; margin-right:0px}
+
+/*.blog_detail_wrapper{width:40px 20px}*/
+.side_bar {width: 100%;float: right; padding: 20px; text-align: center;}
+.side_bar .footer_bx3 ul{width: 323px;display: inline-block;text-align: left;}
+
+.productDesWrapper .product_view{width:100%}
+.productDesWrapper .product_view .product_list_des{border:none}
+.productDesWrapper .side_bar {width: 100%;float: none; padding: 20px; text-align: center; display:inline-block; margin-top:50px}
+.productDesWrapper .product_row{padding-bottom:0px}
+
+.checkout_wrapper .checkout_frm{width:60%; padding:20px;}
+.checkout_wrapper .checkout_billing{width:40%; padding:40px}
+
+.compare_wrapper .additional_row2 .aditional_info_bx li span{margin-right:0px}
+}
+/*768px to 992px end here*/
+
+/*200px to 767px start here*/
+@media screen and (min-width:200px) and (max-width:767px){
+.navbar-toggle{margin-top:33px}
+.navigation_area .cart_area{position:absolute;  right:100px}
+.navigation_area .navbar-nav{float:none}
+.navigation_area .navbar-nav a{padding:10px 20px}
+
+.slider_area .carousel-caption .slide_overlay1{padding-top:0px}
+.slider_area .carousel-caption .slide_overlay1 h2{font-size:22px; margin-bottom:0px}
+.slider_area .carousel-caption .slide_overlay1 h6{font-size:14px;}
+.slider_area .carousel-caption .slide_overlay1 h5{font-size:14px}
+.slider_area .carousel-caption .slide_overlay1 h4{left:inherit; right:-30px; top:0px; width:70px; height:70px; padding:20px 0px; font-size:14px;}
+.slider_area .carousel-caption .slide_overlay1 h4 p{font-size:8px}
+.slider_area .carousel-indicators{bottom:15px}
+
+.service_bx{height:auto; top:-20px; text-align:center}
+.service_bx ul li{width:100%; max-width:100%; margin:0px; text-align:left}
+
+/*.welcome_area{margin-top:15px}*/
+.welcome_area .welcome_lft{width:100%; padding:20px; margin-bottom:30px}
+.welcome_area .welcome_lft ul li{width:100%}
+.welcome_area .welcome_rht{width:100%; background-size:46% auto; padding:20px}
+
+.categories_area{text-align:center; margin-bottom:0px}
+.categories_area ul li{width:100%; max-width:250px; margin-bottom:50px; background:none; float:none}
+
+.category_tab_area{margin:20px 0px 50px 0px}
+.category_tab_area .cat_item{float:none; display:inline-block; margin-right:0px; max-width:250px}
+.category_tab_area .nav > li > a{padding:10px 22px}
+
+.home_review_area{height:auto; padding:0px; background-size:cover}
+.home_review_area .home_review_slider #quote-carousel .carousel-control.left{left:36%}
+.home_review_area .home_review_slider #quote-carousel .carousel-control.right{left:50%}
+.home_review_area .home_review_head{width:100%}
+.home_review_area .home_review_slider #quote-carousel .carousel-control{top:-90px}
+.home_review_area .home_review_slider{width:95%}
+.home_review_area .home_review_slider .quote_details{width:100%; margin:0px; text-align:center; padding:30px}
+.home_review_area .home_review_slider .item figure{float:none; display:inline-block}
+
+.best_selling_area .best_selling_wrapper{width:100%; margin-bottom:20px}
+
+.home_offer_area{margin-bottom:40px}
+.home_offer_area .offer_section{width:100%; height:auto}
+.home_offer_area .offer_section figure{width:100%}
+.home_offer_area .offer_section .fruit_des{width:100%; padding-top:0px;}
+.home_offer_area .offer_section1 figure{padding:0px}
+
+.recent_news_area{width:100%}
+.recent_news_area .news_cnt{margin:0px}
+.recent_news_area .carousel-indicators{height:428px; padding:7px; right:0px; padding:40px}
+.recent_news_area .carousel-indicators li{width:120px; height:100px}
+.recent_news_area .news_cnt .news_slider_txt{text-align:center}
+.recent_news_area .news_cnt .news_slider_txt figure{display:inline-block}
+
+.best_selling_area{padding:40px 0px 20px}
+
+.client_logo_area{top:0px; margin-bottom:0px; margin-top:40px}
+.client_logo_area h1{font-size:28px}
+.client_logo_area h3{font-size:15px}
+.client_logo_area ul li{margin:2px 0px; margin-bottom:0px}
+
+footer{text-align:center}
+.footer_area { display:inline-block; max-width:600px}
+footer .footer_area .footer_bx3 ul li{width:300px; display:inline-block}
+footer .footer_area .footer_bx{width:100%; padding:20px}
+.newsletter_area{padding:20px}
+.copyright_area{top:0px; padding:20px }
+
+.blog_page .news_cnt{left:0px; margin: 10px; }
+.recent_news_area .news_cnt .news_slider_img{left:0px; margin-right:0px; text-align:center}
+
+.product_list_view{text-align:center}
+.product_list_view .product_row{max-width:90%; display:inline-block}
+.product_list_view .product_list_img{width:100%; float:none;}
+.product_list_view .product_list_des{width:100%; text-align:center}
+.product_list_view .product_list_des .price_bx.clr {display: inline-block;}
+
+/*cart page css here*/
+.cart_wrapper{overflow:scroll}
+.cart_wrapper table{ width:768px}
+.cart_wrapper table tr th{padding:16px 10px !important}
+.cart_wrapper table tr td{padding:16px 10px}
+.cart_wrapper table tr td .cart_des h4{margin:3px 0px}
+.cart_wrapper table tr td .cart_des{width:60%}
+.cart_wrapper table tr td .cart_des h5 span{display:block; margin:5px 0px 0px}
+.cart_wrapper table tr:last-child td .spn1{margin:16px 6px}
+
+
+.cnct_wrapper .cnct_section1{text-align:center}
+.cnct_wrapper .cnct_section1 ul{padding:20px; max-width:388px; display:inline-block}
+.cnct_wrapper .cnct_section1 li{width:100%;}
+.cnct_wrapper .cnct_section1 li .cnct_des{text-align:left}
+
+.cnct_wrapper{padding:40px 0px}
+.cnct_wrapper .cnct_frm .site-section-area{text-align:center}
+.cnct_wrapper .cnct_frm{padding:40px 20px; margin-top:0px;}
+.cnct_wrapper .cnct_frm{text-align:center}
+
+.blog_detail_wrapper .blog_lft .blog_section2 .site-section-area{margin:0px}
+.blog_detail_wrapper .blog_lft .blog_section2 .site-section-area, .blog_detail_wrapper .blog_lft .blog_section3 .site-section-area{text-align:center}
+.blog_section1 {text-align: center; padding: 20px;}
+.blog_detail_wrapper .blog_lft .blog_section2 .blog_comment_area .comment_row{padding:40px 0px 20px 20px}
+.blog_detail_wrapper .blog_lft .blog_section2 .blog_comment_area .comment_row2{padding-left:20px !important}
+.blog_detail_wrapper .blog_lft .blog_section3{ padding:20px; text-align:center}
+.side_bar {width: 100%;float: right; padding: 20px; text-align: center;}
+.side_bar .footer_bx3 ul{width: 323px;display: inline-block;text-align: left;}
+
+.category_bx ul li{text-align:left}
+
+.productDesWrapper .product_row{padding:0px}
+.side_bar .footer_area .footer_bx3{margin-bottom:0px}
+.productDesWrapper .product_view{width:100%; margin-bottom:30px}
+.productDesWrapper .product_view .product_list_img{width:100%}
+.productDesWrapper .product_view .product_list_des{width:100%;padding-top: 30px;}
+.productDesWrapper .side_bar{display:inline-block; float:none}
+
+.aditional_info {padding: 30px;}
+.aditional_info .aditional_info_bx{width:100%}
+
+
+.checkout_wrapper .checkout_frm{width:100%; padding:20px;}
+.checkout_wrapper .checkout_frm .site-section-area {text-align: center;}
+.checkout_wrapper .checkout_billing{width:100%; padding:40px}
+/*..........200px to 767px end here...................*/
+
+
+/*................581px to 767px start here............*/
+@media screen and (min-width:581px) and (max-width:767px){
+.slider_area .carousel-caption .slide_overlay1 h2{font-size:40px}
+.slider_area .carousel-caption .slide_overlay1 h5{font-size:24px}
+.slider_area .carousel-caption .slide_overlay1 h6{font-size:20px}
+.slider_area .carousel-caption .slide_overlay1 h4{width:120px; height:120px; padding:44px 0px;}
+.header_top_area .phone_bx{margin-right:15px}
+.client_logo_area ul li{width:18%; margin:0px; height:120px; line-height:120px; padding:0px 10px}
+.compare_wrapper .compare_search, .compare_wrapper .compare_product{padding:20px}
+.compare_wrapper .compare_product .compare_des_rht{width:100%}
+}
+/*................581px to 767px end here............*/
+
+
+/*320px to 580px start here*/
+@media screen and (min-width:200px) and (max-width:580px){
+.site-section-area h2{font-size:26px}
+.site-section-area h6{font-size:14px}
+.navbar-toggle{margin-top:33px}
+.header_top_area{text-align:center}
+.header_top_area .phone_bx{float:none; margin-right:5px;}
+.header_top_area .social_bx{float:none}
+.header_top_area .login_bx{width:100%; text-align:center; margin-top:10px}
+.header_top_area .login_bx i{margin:0px 5px}
+.header_top_area .login_bx a{padding-left:3px}
+.navigation_area .cart_area{position:absolute; right:100px; background:none}
+.navigation_area .cart_area div{display:none}
+.navigation_area .navbar-nav{float:none}
+.navigation_area .navbar-nav a{padding:10px 20px}
+.slider_area .carousel-caption .slide_overlay1{padding-top:0px}
+.slider_area .carousel-caption .slide_overlay1 h2{font-size:22px; margin-bottom:0px}
+.slider_area .carousel-caption .slide_overlay1 h6{font-size:14px;}
+.slider_area .carousel-caption .slide_overlay1 h5{font-size:14px}
+.slider_area .carousel-caption .slide_overlay1 h4{left:inherit; right:-30px; top:0px; width:70px; height:70px; padding:20px 0px; font-size:14px;}
+.slider_area .carousel-caption .slide_overlay1 h4 p{font-size:8px}
+.slider_area .carousel-indicators{bottom:15px}
+.nav-left { left: 0px; }
+.service_bx{height:auto; top:-20px}
+.service_bx ul li{width:100%; max-width:100%; margin:0px}
+.service_bx ul li {
+	padding: 10% !important;
+}
+
+.category_tab_area .tab_wrapper .nav-tabs{ width:100%}
+.category_tab_area .tab_wrapper .nav-tabs li{ width:100%; background:none; border-bottom:1px solid #eee; margin-bottom:0px}
+.category_tab_area .nav > li > a{background:none}
+.category_tab_area .nav > li.active > a::after{background:none}
+.category_tab_area .cat_item{float:none; display:inline-block; margin-right:0px; max-width:250px}
+
+.welcome_area .welcome_rht ul li figure{width:50px; height:50px; line-height:50px}
+.welcome_area .welcome_rht ul li .abt_des{width:60%}
+
+.recent_news_area .carousel-indicators li{width:50px; height:40px; }
+.recent_news_area .carousel-indicators{padding:5px}
+
+.inner_top_area h2{font-size:24px}
+.pagination{padding:18px 0px}
+.pagination > li > a, .pagination > li > span{padding:2px; font-size:12px}
+
+.product_list_view .product_row{max-width:95%; display:inline-block}
+.product_list_view .product_list_des{width:100%; text-align:center; padding:20px 20px}
+
+.client_logo_area ul li{width:18%; height:70px; line-height:70px; padding:0px 5px}
+
+.compare_wrapper .compare_search, .compare_wrapper .compare_product{padding:20px}
+.compare_wrapper .compare_search li{width:100%; margin:20px 0px}
+.compare_wrapper .compare_product ul li{width:100%}
+
+
+}
+/*200px to 580px end here*/
+
+/*200px to 480px start here*/
+@media screen and (min-width:200px) and (max-width:480px){
+.product_btn li:first-child {display: block;margin-bottom: 20px;width: 100%;}
+.cnct_wrapper .cnct_section1 li .cnct_des{width:59%; word-wrap:break-word}
+.comment_frm ul li:nth-child(2),.comment_frm ul li:nth-child(3){width:100%}
+.nav-left { left: 0px; }
+}
+
+@media screen and (min-width:200px) and (max-width:1920px){ 
+	.service_bx ul li {
+		position: relative;
+	}
+	.service_bx ul li figure {
+		position: absolute;
+    	right: 10px;
+	}
+}
+
+/*200px to 480px end here*/
+
+@media screen and (min-width:200px) and (max-width:360px){
+
+.navigation_area .cart_area{position:absolute; right:80px;}
+.best_selling_area .best_selling_wrapper .best_selling_section1{width:100%}
+.best_selling_area .best_selling_wrapper .best_selling_section2{width:100%}
+footer .footer_area .footer_bx3 ul li{width:230px}
+footer .footer_area .footer_bx3 ul li .product_des h3{font-size:12px}
+footer .footer_area .footer_bx3 ul li figure{width:20%}
+footer .footer_area .footer_bx3 ul li .product_des{width:80%}
+.pagination > li > a, .pagination > li > span{padding:1px; font-size:10px}
+
+.newsInptbx input[type="button"]
+{
+    width: 30%;	
+}
+.newsInptbx input[type="text"]
+{
+    width: 70%;	
+}
+.newsInptbx {
+    width: 260px;
+}
+}
+@media screen and (min-width:340px) and (max-width:480px){
+	.newsInptbx {
+	    width: 340px;
+	}
+}
