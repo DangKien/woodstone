@@ -88,3 +88,37 @@
 		}
 		echo '</ul>';
 	}
+
+	function showMenuTop ($arrs, $parent) {
+		foreach ($arrs as $key => $arr) {
+			echo ($parent == 0) ? '<li class="dropdown">' : '';
+			if ($arr->parent_id == $parent) {
+				echo $parent != 0 ? '<li class="dropdown-submenu">' : '';
+				echo  '<a href="'.route('home.categories',[$arr->slug, $arr->id]).'"> '.$arr->name.'</a>';
+				echo  $arr->hasParent == 1 ? ' <i class="fa fa-caret-down" class="dropdown-toggle" data-toggle="dropdown"></i>' : '';
+				unset($arrs[$key]);
+				showMenuTopChildren($arrs, $arr->id, $arr);
+				echo $parent != 0 ? '</li>' : '';
+			}
+			echo ($parent == 0) ? '</li>': '';
+		}
+	}
+
+	function showMenuTopChildren($arrs, $parent, $arr) {
+		if ($arr->hasParent == 1) {
+			echo '<ul class="dropdown-menu">';
+			foreach ($arrs as $key => $arr) {
+				echo ($parent == 0) ? '<li class="dropdown">' : '';
+				if ($arr->parent_id == $parent) {
+					echo $parent != 0 ? '<li class="dropdown-submenu">' : '';
+					echo  '<a href="'.route('home.categories',[$arr->slug, $arr->id]).'"> '.$arr->name.'</a>';
+					echo  $arr->hasParent == 1 ? ' <i class="fa fa-caret-down" class="dropdown-toggle" data-toggle="dropdown"></i>' : '';
+					unset($arrs[$key]);
+					showMenuTopChildren($arrs, $arr->id, $arr);
+					echo $parent != 0 ? '</li>' : '';
+				}
+				echo ($parent == 0) ? '</li>': '';
+			}
+			echo '</ul>';
+		}
+	}

@@ -2448,3 +2448,11 @@ p a:hover {
 	float: left;
 	padding:40px 10px;
 }
+
+.navigation_area .navbar-nav li i {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	margin-top: -7px;
+}
+

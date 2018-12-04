@@ -60,8 +60,8 @@ Route::group(['prefix' => '', 'middleware' => 'role:superadmin'], function() {
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function() {
-    Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
-    Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\controllers\UploadController@upload');
+    Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+    Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
     
 
     Route::get('users/profile', 'UserController@show')->name('users.profile');

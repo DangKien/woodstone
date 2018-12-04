@@ -22,6 +22,13 @@
 .productDesWrapper .blog_lft{width:100%}
 
 .compare_wrapper .additional_row2 .aditional_info_bx li span{margin-right:0px}
+.navbar-inverse .navbar-nav>li>a.active {
+	color: #9fcb32;
+}
+.navigation_area .navbar-nav li:hover>ul {
+	display: block;
+}
+
 }
 
 /*993px to 1169px start here*/
@@ -82,6 +89,9 @@ footer .footer_area .footer_bx1{padding:0px 20px}
 .product_list_view .product_list_des ul li:first-child a{padding:0px 20px}
 
 .compare_wrapper .additional_row2 .aditional_info_bx li span{margin-right:0px}
+.navbar-inverse .navbar-nav>li>a.active {color: #9fcb32;}
+.navigation_area .navbar-nav li:hover>ul {display: block;}
+
 }
 /*993px to 1169px end here*/
 
@@ -91,6 +101,8 @@ footer .footer_area .footer_bx1{padding:0px 20px}
 .navigation_area .cart_area div{font-size:14px;}
 .navigation_area .cart_area{padding:5px; text-align:center; }
 .navigation_area .cart_area h4{float:none; display:inline-block}
+.navbar-inverse .navbar-nav>li>a.active {color: #9fcb32;}
+.navigation_area .navbar-nav li:hover>ul {display: block;}
 
 .slider_area .carousel-caption .slide_overlay1{padding-top:20px}
 .slider_area .carousel-caption .slide_overlay1 h4{left:inherit; right:-18%; top:3%}
@@ -405,5 +417,19 @@ footer .footer_area .footer_bx3 ul li .product_des{width:80%}
 @media screen and (min-width:340px) and (max-width:480px){
 	.newsInptbx {
 	    width: 340px;
+	}
+}
+}
+@media (min-width: 768px) {
+	.navbar-inverse .navbar-nav>li>a.active {color: #9fcb32;}
+	.navigation_area .navbar-nav li:hover>ul {display: block;}
+}
+@media (max-width: 767px) {
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
+		color: #9fcb32;
+		background-color: transparent;
+	}
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+		color: #353232;
 	}
 }

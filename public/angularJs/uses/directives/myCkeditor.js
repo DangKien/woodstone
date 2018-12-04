@@ -5,7 +5,7 @@ ngApp.directive('myCkeditor', function($apply, $timeout) {
         link: function(scope, element, attrs, ngModel) {
             $apply (function () {
                 var ck = CKEDITOR.replace(element[0], {
-                    language: 'vi',
+                    language: 'zh-cn',
                     filebrowserImageBrowseUrl: SiteUrl + '/laravel-filemanager?type=Images',
                     filebrowserImageUploadUrl: SiteUrl + '/laravel-filemanager/upload?type=Images&_token=',
                     filebrowserBrowseUrl: SiteUrl + '/laravel-filemanager?type=Files',
