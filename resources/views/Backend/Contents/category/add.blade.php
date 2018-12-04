@@ -13,6 +13,7 @@
     </div>
     @php
 		$languages = app('Language')->getLanguage();
+
     @endphp
 	<div id="page-content">
 	    <div class="panel-body">
@@ -121,7 +122,8 @@
 							                                        	{!! trans('backend.category.meta_content') !!}
 							                                        	<span class="text-danger">*</span>
 							                                        </label>
-							                                        <textarea name="meta_content[{{ @$languageTab->id }}]" placeholder="{!! trans('backend.category.meta_content') !!}" rows="5" class="form-control">{{ @$recordCategory->meta_data ? @$recordCategory->meta_data : old('meta_content.'.@$languageTab->id)}}</textarea>
+							                                        <textarea name="meta_content[{{ @$languageTab->id }}]" placeholder="{!! trans('backend.category.meta_content') !!}"
+																			  rows="5" class="form-control">{{ @$recordCategory->meta_data ? @$recordCategory->meta_data : old('meta_content.'.@$languageTab->id)}}</textarea>
 							                                    </div>
 							                                </div>
 						                            	</div>

@@ -1,9 +1,6 @@
 @extends('Frontend.Layouts.default')
 
 @section ('content')
-    @php
-        $contact = app('Setting')->getContact();
-    @endphp
     <div class="inner_top_area mrzn_zero">
         <h2>{{ __('frontend.label.about') }}</h2>
         <h5><a href="{{ route('home.index') }}">{{ __('frontend.lable.home') }}</a> | {{ __('frontend.label.about') }} </h5>
@@ -39,7 +36,11 @@
 @section ('myCss')
 @endsection
 @section ('meta')
-<meta name="description" content="{!! @$seo->data->description !!}">
-<meta name="keywords" content="{!! @$seo->data->keyword !!}" />
+    @php
+        $arrMeta['title'] = @$about->seo_keyword ?? __('frontend.label.about');
+        $arrMeta['meta_image'] = '';
+        $arrMeta['meta_keyword'] = $about->seo_keyword;
+        $arrMeta['meta_description'] = $about->description;
+    @endphp
+    @includeIf('Frontend.Layouts._meta', $arrMeta)
 @endsection
-@section ('title', @$seo->data->title)

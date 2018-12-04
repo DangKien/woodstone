@@ -10,6 +10,7 @@ use App\Models\Language;
 use App\Models\Product;
 use App\Models\Category;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Validation\Rule;
 use App\Libs\Configs\StatusConfig;
 use DB;
@@ -40,8 +41,19 @@ class ProductController extends Controller
 	 */
 	public function list(Request $request)
 	{
-		$products = $this->productModel
-							->paginate(15);
+		$orderName = $request->input('orderName', 'id');
+		$orderBy   = $request->input('orderBy', 'desc');
+		$freeText  = $request->input('freetext', '');
+		$products = $this->productModel->filterName($freeText)
+					->buildCond()
+					->select('products.*')
+					->join('product_translations as t', 't.product_id', '=', 'products.id')
+					->where( array(
+						array('locale', App::getLocale() ),
+					))
+					->orderBy($orderName, $orderBy)
+					->with('translations')
+					->paginate(15);
 
 		return response()->json($products);
 	}

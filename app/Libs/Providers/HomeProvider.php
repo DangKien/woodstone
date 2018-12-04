@@ -57,4 +57,13 @@ class HomeProvider {
 		return $menus;
 	}
 
+	public function getCateFooter() {
+		$menu = $this->categoryModel::where(array(
+			array('status', StatusConfig::CONST_AVAILABLE),
+			array('level', "<=", 2)
+		))->get();
+		$menu = $this->getMenuHasSub($menu);
+		return $menu;
+	}
+
 }

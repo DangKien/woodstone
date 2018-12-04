@@ -11,6 +11,7 @@ use App\Models\Language;
 use App\Libs\Configs\StatusConfig;
 
 use DB;
+use Illuminate\Support\Facades\App;
 
 class PostController extends Controller
 {
@@ -35,10 +36,21 @@ class PostController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function list()
+	public function list(Request $request)
 	{
-		$posts = $this->postModel::paginate(15);
-
+		$orderName = $request->input('orderName', 'id');
+		$orderBy   = $request->input('orderBy', 'desc');
+		$freeText  = $request->input('freetext', '');
+		$posts = $this->postModel->filterName($freeText)
+								->buildCond()
+								->select('posts.*')
+								->join('post_translations as t', 't.post_id', '=', 'posts.id')
+								->where( array(
+									array('locale', App::getLocale() ),
+								))
+								->orderBy($orderName, $orderBy)
+								->with('translations')
+								->paginate(15);
 		return response()->json($posts);
 	}
 

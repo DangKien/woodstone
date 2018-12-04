@@ -12,6 +12,7 @@
         </div>
         @php
             $languages = app('Language')->getLanguage();
+
         @endphp
         <div id="page-content">
             <div class="panel-body">

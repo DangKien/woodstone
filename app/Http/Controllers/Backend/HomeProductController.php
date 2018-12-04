@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use DB;
+use Illuminate\Support\Facades\App;
 use Illuminate\Validation\Rule;
 
 class HomeProductController extends Controller
@@ -35,9 +36,23 @@ class HomeProductController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function list()
+	public function list(Request $request)
 	{
-		$products = $this->homeProductModel::paginate(15);
+		$orderName = $request->input('orderName', 'id');
+		$orderBy   = $request->input('orderBy', 'desc');
+		$freeText  = $request->input('freetext', '');
+
+		$products = $this->homeProductModel->filterName($freeText)
+										->buildCond()
+										->select('home_products.*')
+										->join('home_product_translations as t', 't.home_product_id', '=', 'home_products.id')
+										->where( array(
+											array('locale', App::getLocale() ),
+										))
+										->orderBy($orderName, $orderBy)
+										->with('translations')
+										->paginate(15);
+
 		return response()->json($products);
 	}
 

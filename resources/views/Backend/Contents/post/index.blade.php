@@ -41,8 +41,8 @@
                                     <th class="text-center">#</th>
                                     <th class="text-center">{!! trans('backend.post.image') !!}</th>
                                     <th class="sorting"
-                                        ng-class="scope.filter.orderBy =='name' && filter.reverse ? 'sorting-desc' : 'sorting-asc' "
-                                        ng-click="actions.orderBy('name')">{!! trans('backend.post.title') !!}</th>
+                                        ng-class="scope.filter.orderBy =='title' && filter.reverse ? 'sorting-desc' : 'sorting-asc' "
+                                        ng-click="actions.orderBy('title')">{!! trans('backend.post.title') !!}</th>
                                     <th class="sorting"
                                         ng-class="scope.filter.orderBy =='status' && filter.reverse ? 'sorting-desc' : 'sorting-asc' "
                                         ng-click="actions.orderBy('status')">{!! trans('backend.status.status') !!}</th>

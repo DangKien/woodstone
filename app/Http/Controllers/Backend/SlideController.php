@@ -31,9 +31,12 @@ class SlideController extends Controller
 
 		$order      = $request->has('order') ? $request->order : 'id';
 		$order_code = $request->input('orderBy', 'desc');
-		
-        $slides  = $this->slideModel::orderBy($order, $order_code)
-                            ->paginate(10);
+	    $freeText  = $request->input('freetext', '');
+
+        $slides  = $this->slideModel->filterName($freeText)
+	                                ->buildCond()
+                                    ->orderBy($order, $order_code)
+                                    ->paginate(10);
                             
         return response()->json($slides);
     }

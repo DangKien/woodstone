@@ -23,15 +23,19 @@ class CategoryController extends Controller
     public function list(Request $request) {
         $orderName = $request->input('orderName', 'id');
         $orderBy   = $request->input('orderBy', 'desc');
-
+        $freeText  = $request->input('freetext', '');
 
         $categories = $this->categoryModel
-            ->select('categories.id', 'name', 'parent_id', 'depth', 'status')
-            ->join('categories_translation as t', 't.category_id', '=', 'categories.id')
-            ->where('locale', App::getLocale())
-            ->orderBy('depth','asc')
-            ->with('translations')
-            ->get();
+			        ->filterName($freeText)
+			        ->buildCond()
+		            ->select('categories.id', 'name', 'parent_id', 'depth', 'status')
+		            ->join('categories_translation as t', 't.category_id', '=', 'categories.id')
+		            ->where( array(
+		            	array('locale', App::getLocale() ),
+		            ))
+		            ->orderBy($orderName, $orderBy)
+		            ->with('translations')
+		            ->get();
 
         return response()->json($categories);
     }

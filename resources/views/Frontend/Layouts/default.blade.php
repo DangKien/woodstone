@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset=utf-8>
-        <title> @yield('title') </title>
+        {{--<title> @yield('title') </title>--}}
         @yield('meta')
         <link rel="icon" href="{{ url('Frontend/img/logo_title1.png') }}" type="image/gif" sizes="32x32">
         <script>

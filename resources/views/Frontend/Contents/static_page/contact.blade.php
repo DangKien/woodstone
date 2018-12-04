@@ -5,8 +5,8 @@
         $contact = app('Setting')->getContact();
     @endphp
     <div class="inner_top_area mrzn_zero">
-        <h2>Contact Us</h2>
-        <h5>Home /  Contact Us</h5>
+        <h2>{{ __('frontend.label.contact') }}</h2>
+        <h5><a href="{{ route('home.index') }}">{{ __('frontend.lable.home') }}</a> | {{ __('frontend.label.contact') }} </h5>
     </div>
     <div class="cnct_wrapper">
         <div class="container">
@@ -82,20 +82,15 @@
 
 
 @section ('myJs')
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            items:1,
-            margin:10,
-            nav:true,
-            navText: ['<i class="fa fa-angle-left nav-product nav-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right nav-product nav-right" aria-hidden="true"></i>']
-        })
-    </script>
 @endsection
 @section ('myCss')
 @endsection
 @section ('meta')
-    <meta name="description" content="{!! @$seo->data->description !!}">
-    <meta name="keywords" content="{!! @$seo->data->keyword !!}" />
+    @php
+        $arrMeta['title'] = __('frontend.label.contact');
+        $arrMeta['meta_image'] = '';
+        $arrMeta['meta_keyword'] = '';
+        $arrMeta['meta_description'] = '';
+    @endphp
+    @includeIf('Frontend.Layouts._meta', $arrMeta)
 @endsection
-@section ('title', @$seo->data->title)

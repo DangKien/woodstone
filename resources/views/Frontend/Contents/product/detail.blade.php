@@ -61,7 +61,11 @@
 @section ('myCss')
 @endsection
 @section ('meta')
-    <meta name="description" content="{!! @$seo->data->description !!}">
-    <meta name="keywords" content="{!! @$seo->data->keyword !!}" />
+    @php
+        $arrMeta['title'] = @$product->meta_title ??  @$product->name;
+        $arrMeta['meta_image'] = @$product->image ?? "";
+        $arrMeta['meta_keyword'] = @$product->meta_keyword ?? "";
+        $arrMeta['meta_description'] = @$product->meta_description ?? "";
+    @endphp
+    @includeIf('Frontend.Layouts._meta', $arrMeta)
 @endsection
-@section ('title', @$seo->data->title)

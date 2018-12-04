@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
 
-class Post extends Model
+class Post extends MyModel
 {
 	use Translatable;
     protected $table = "posts";
@@ -18,4 +18,11 @@ class Post extends Model
 	                                   'title', 'slug', 'description', 'content'];
 
 	public $translationForeignKey = 'post_id';
+
+	public function filterName($params) {
+		if (!empty($params) ) {
+			$this->setFunctionCond('where', ['title', 'like', "%".$params."%"]);
+		}
+		return $this;
+	}
 }

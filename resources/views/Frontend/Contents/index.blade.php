@@ -80,7 +80,11 @@
 @section ('myCss')
 @endsection
 @section ('meta')
-    <meta name="description" content="{!! @$seo->data->description !!}">
-    <meta name="keywords" content="{!! @$seo->data->keyword !!}" />
+    @php
+        $arrMeta['title'] = '';
+        $arrMeta['meta_image'] = '';
+        $arrMeta['meta_keyword'] = '';
+        $arrMeta['meta_description'] = '';
+    @endphp
+    @includeIf('Frontend.Layouts._meta', $arrMeta)
 @endsection
-@section ('title', @$seo->data->title)

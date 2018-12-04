@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
 
-class Product extends Model
+class Product extends MyModel
 {
 	use Translatable;
 
@@ -17,4 +17,11 @@ class Product extends Model
 	                                   'series', 'meta_title', 'meta_description', 'meta_data'];
 
 	public $translationForeignKey = 'product_id';
+
+	public function filterName($params) {
+		if (!empty($params) ) {
+			$this->setFunctionCond('where', ['title', 'like', "%".$params."%"]);
+		}
+		return $this;
+	}
 }

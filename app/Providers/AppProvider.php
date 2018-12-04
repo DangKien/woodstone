@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 
@@ -14,6 +15,10 @@ class AppProvider extends ServiceProvider
      */
     public function boot()
     {
+//	    View::composer('Frontend.*', function ($view) {
+//		    $seo = app('Setting')->getSeo();
+//		    $view->with('seo', $seo);
+//	    });
         $this->app->singleton('Language', function ($app) {
             return new \App\Libs\Providers\Language();
         });
