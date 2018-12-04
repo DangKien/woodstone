@@ -31,6 +31,8 @@
                                         </div>
                                     </div>
                                 @endforeach
+                            </div>
+                            <div class="row">
                                 <div class="pagination_area">
                                     {{ $posts->links('Frontend.Layouts._paginate') }}
                                 </div>

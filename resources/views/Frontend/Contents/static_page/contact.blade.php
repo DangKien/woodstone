@@ -30,7 +30,7 @@
                         <li>
                             <figure><img src="{{ url('Frontend') }}/images/phone_icon.png" alt="location Icon"></figure>
                             <div class="cnct_des">
-                                <h4>Phone No</h4>
+                                <h4>{{ @$contact->setting->phone }}</h4>
                                 <h6>{{ __('frontend.contact.phone') }}: {{ @$contact->setting->phone }}<br>
                                     {{ __('frontend.contact.fax') }}: {{ @$contact->setting->fax }}
                                 </h6>

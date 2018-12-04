@@ -2992,8 +2992,6 @@ tbody.collapse.in {
 	display: none;
 	float: left;
 	min-width: max-content;
-	min-width: -moz-max-content;
-	min-width: -webkit-max-content;
 	padding: 5px 0;
 	margin: 2px 0 0;
 	font-size: 14px;
