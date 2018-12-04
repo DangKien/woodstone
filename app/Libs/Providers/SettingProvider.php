@@ -39,4 +39,13 @@ class SettingProvider {
 		return $data;
 	}
 
+	public function getSettingHome() {
+		$data = $this->settingModel->where('key', StatusConfig::CONST_SETTING_HOME)
+			->first();
+		if (!empty($data->setting)) {
+			$data->setting = json_decode($data->setting);
+		}
+		return $data;
+	}
+
 }

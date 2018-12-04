@@ -92,5 +92,20 @@ $(document).ready(function(){
             element.siblings('li').find('ul').slideUp();
           }
     });
+    $( window).resize(function() {
+        if ($( window ).width() > 768) {
+            $('.dropdown i').parent().parent().find('ul').css('display', '');
+        }
 
+    });
+    $('.dropdown i').click(function () {
+        element = $(this).parent().parent().children('ul');
+        if (element.hasClass('open')) {
+            element.removeClass('open');
+            element.slideUp();
+        } else {
+            element.addClass('open');
+            element.slideDown();
+        }
+    })
 });		

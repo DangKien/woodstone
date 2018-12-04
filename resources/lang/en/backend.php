@@ -126,9 +126,6 @@ return array (
     'logo_bottom' => 'Logo bottom',
     'google_map' => 'Google',
     'fb_pixel' => 'Facebook Pixel',
-    'zalo' => 'Zalo',
-    'whatapp' => 'What app',
-    'wechat' => 'We chat',
   ),
   'about' => 
   array (
@@ -183,9 +180,5 @@ return array (
     'created_at' => 'Created At',
     'link' => 'Link',
     'image' => 'Image',
-  ),
-  'sidebar' => 
-  array (
-    'product' => 'Products',
   ),
 );

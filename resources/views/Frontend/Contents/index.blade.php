@@ -3,26 +3,31 @@
 @section ('content')
     @php
         $productHomes = app('Home')->getProductHome();
+        $settingHome = app('Setting')->getSettingHome();
     @endphp
     <div class="service_bx">
         <ul>
             <li>
                 <div class="service_head">
                     <h4>{{ __('frontend.label.contact') }}</h4>
-                    <h6>{!! __('frontend.contact.description_contact') !!}</h6>
-                    <div class="mt25">
-                        <a href="/sub04/sub01.php">{{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i></a>
-                    </div>
+                    <h6>{!! \Illuminate\Support\Str::words(@$settingHome->setting->description_contact, 18, " ...")!!}</h6>
+                    <a href="{{ route('home.contact') }}">
+                        <div class="mt25">
+                            {{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i>
+                        </div>
+                    </a>
                 </div>
                 <figure><img src="{{ url('Frontend') }}/images/product/1.png" alt="icon"></figure>
             </li>
             <li>
                 <div class="service_head">
                     <h4>{{ __('frontend.label.about') }}</h4>
-                    <h6>{!! __('frontend.contact.description_about') !!}</h6>
-                    <div class="mt26">
-                        <a href="/sub04/sub01.php">{{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i></a>
-                    </div>
+                    <h6>{!! \Illuminate\Support\Str::words(@$settingHome->setting->description_about, 18, " ...") !!}</h6>
+                    <a href="{{ route('home.about') }}">
+                        <div class="mt26">
+                            {{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i>
+                        </div>
+                    </a>
                 </div>
                 <figure><img src="{{ url('Frontend') }}/images/product/2.png" alt="icon"></figure>
             </li>

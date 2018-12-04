@@ -4,8 +4,11 @@
             <div class="row">
                 <div class="login_bx">
                     <a href="{{ route('home.index') }}"><i class="fa  fa"></i>{{ __('frontend.lable.home') }}</a>
-                    <a href="{{ route('home.contact') }}">|<i class="fa  fa"></i>{{ __('frontend.lable.contact_us') }}</a>
-                    <a href="">|<i class="fa  fa"></i>{{ __('frontend.lable.sitemap') }}</a>
+                    <a href="{{ route('home.contact') }}">|<i class="fa  fa"></i>{{ __('frontend.lable.contact_us') }} </a>
+                    <a>|</a>
+                    <a class="{{ $_COOKIE['locale'] == 'en' || !isset($_COOKIE['locale']) ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'en']) }}"> En </a>
+                    <a>|</a>
+                    <a class="{{ $_COOKIE['locale'] == 'tw' ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'tw']) }}"> Tw </a>
                 </div>
             </div>
         </div>
@@ -23,16 +26,11 @@
                 <a class="navbar-brand" href="{{ route('home.index') }}"><img src="{{ url('').@$logo->setting->top }}" alt="logo"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse col-md-7 col-sm-7 pull-right" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse col-md-7 col-sm-8" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     {{ showMenuTop($menus, 0) }}
                     <li> <a href="{{ route('home.news') }}">{{ __('frontend.lable.new_center') }}</a> </li>
                     <li> <a href="{{ route('home.about') }}">{{ __('frontend.lable.company') }}</a> </li>
-                    <li class="none">
-                        <a class="{{ $_COOKIE['locale'] == 'en' || !isset($_COOKIE['locale']) ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'en']) }}"> En </a>
-                        <a>|</a>
-                        <a class="{{ $_COOKIE['locale'] == 'tw' ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'tw']) }}"> Tw </a>
-                    </li>
                 </ul>
             </div>
         </div>

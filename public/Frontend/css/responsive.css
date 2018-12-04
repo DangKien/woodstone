@@ -5,11 +5,13 @@
 .navigation_area .navbar-nav a{padding:40px 14px}
 .navigation_area .cart_area div{font-size:12px}
 .navigation_area .cart_area{padding:30px 8px}
+.navigation_area .navbar-nav>li>p {padding: 40px 20px;margin: 0px;}
 .service_bx ul li{padding:4% 1%}
 .welcome_area .welcome_rht{background-size:50% auto; height:500px}
 .categories_area ul li .cat_overlay h4{font-size:20px}
 .category_tab_area .cat_item{width:217px; float:none; display:inline-block}
 .client_logo_area ul li{width:170px}
+
 
 .cnct_wrapper .cnct_section1{text-align:center}
 .cnct_wrapper .cnct_section1 li{width:32%; margin-right:0px; text-align:center; max-width:300px; display:inline-block}
@@ -327,7 +329,7 @@ footer .footer_area .footer_bx{width:100%; padding:20px}
 .navigation_area .cart_area{position:absolute; right:100px; background:none}
 .navigation_area .cart_area div{display:none}
 .navigation_area .navbar-nav{float:none}
-.navigation_area .navbar-nav a{padding:10px 20px}
+.navigation_area .navbar-nav a{padding:10px 20px; }
 .slider_area .carousel-caption .slide_overlay1{padding-top:0px}
 .slider_area .carousel-caption .slide_overlay1 h2{font-size:22px; margin-bottom:0px}
 .slider_area .carousel-caption .slide_overlay1 h6{font-size:14px;}
@@ -423,6 +425,10 @@ footer .footer_area .footer_bx3 ul li .product_des{width:80%}
 @media (min-width: 768px) {
 	.navbar-inverse .navbar-nav>li>a.active {color: #9fcb32;}
 	.navigation_area .navbar-nav li:hover>ul {display: block;}
+	.container-fluid>.navbar-collapse, .container>.navbar-collapse {
+		float: right;
+	}
+	.navigation_area .navbar-nav>li>p {padding: 38px 20px;margin: 0px;}
 }
 @media (max-width: 767px) {
 	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
@@ -431,5 +437,32 @@ footer .footer_area .footer_bx3 ul li .product_des{width:80%}
 	}
 	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
 		color: #353232;
+	}
+	.navigation_area .navbar-nav>li>p {padding: 10px 20px;margin: 0px;}
+	.navigation_area .navbar-nav li i {
+		position: absolute;
+		top: 50%;
+		margin-top: -14px;
+		padding: 7px 30px;
+		cursor: pointer;
+	}
+
+	.dropdown-menu {
+		position: relative;
+		z-index: 1000;
+		display: none;
+		float: left;
+		min-width: calc(100% - 20px);
+		padding: 5px 10px;
+		margin: 2px 0 0;
+		font-size: 14px;
+		text-align: left;
+		list-style: none;
+		background-color: #fff;
+		-webkit-background-clip: unset;
+		background-clip: unset;
+		border: none;
+		-webkit-box-shadow: unset;
+		box-shadow: unset;
 	}
 }

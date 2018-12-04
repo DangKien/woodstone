@@ -16,6 +16,9 @@
                             <li>
                                 <a data-toggle="tab" href="#tab-3">{!! trans('backend.setting.logo') !!}</a>
                             </li>
+                            <li>
+                                <a data-toggle="tab" href="#tab-4">{!! trans('backend.setting.setting_home') !!}</a>
+                            </li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-1" class="tab-pane fade active in">
@@ -216,6 +219,36 @@
                                                         <i class="fa fa-save"></i> {{ trans('backend.actions.send') }}
                                                     </button>
                                                 </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-4" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <form>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">{!! trans('backend.setting.description_contact') !!}</label>
+                                                    <textarea rows="6" type="text" class="form-control" ng-model="data.description_home.description_contact"
+                                                              required></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">{!! trans('backend.setting.description_about') !!}</label>
+                                                    <textarea rows="6" type="text" class="form-control" ng-model="data.description_home.description_about"
+                                                              required></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <button type="button" ng-click="actions.saveSettingHome()" class="btn btn-primary btn-block">
+                                                    <i class="fa fa-save"></i> {{ trans('backend.actions.send') }}
+                                                </button>
                                             </div>
                                         </form>
                                     </div>

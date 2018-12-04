@@ -197,6 +197,18 @@ ul {
 	text-transform: uppercase;
 	font-weight: bold
 }
+.navigation_area .navbar-nav p a {
+	padding: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+}
+
+.navigation_area .navbar-nav p {
+	margin: 5px;
+	position: relative;
+}
 .navigation_area .navbar-nav ul li a {
 	padding: 5px 20px;
 	font-weight: 500
@@ -2456,3 +2468,12 @@ p a:hover {
 	margin-top: -7px;
 }
 
+.navbar-inverse .navbar-nav>li>p>a {
+	color: #222222;
+}
+.navbar-collapse.in {
+	overflow: unset;
+}
+.header_top_area .login_bx a.active {
+	color:#9fcb32;
+}

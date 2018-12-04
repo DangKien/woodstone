@@ -29,6 +29,12 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
                     if (value.key == 'LOGO') {
                         $scope.data.logo = value.setting
                     }
+
+                    if (value.key == 'SETTING_HOME') {
+                        $scope.data.description_home = value.setting
+                    }
+
+
                 });
             }, function (error) {
             })
@@ -63,6 +69,24 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
                         'image': $scope.data.seo_default.image || '',
                     }),
                 'key' : 'SEO_DEFAULT'
+            }
+            $settingService.action.insertSetting(params).then(function (resp){
+                if (resp) {
+                    $myNotify.success('Success')
+                }
+            }, function (error) {
+                $myNotify.error('Error')
+            });
+        },
+
+        saveSettingHome: function () {
+            let params = {
+                'setting': JSON.stringify(
+                    {
+                        'description_about': $scope.data.description_home.description_about || '',
+                        'description_contact' : $scope.data.description_home.description_contact || '',
+                    }),
+                'key' : 'SETTING_HOME'
             }
             $settingService.action.insertSetting(params).then(function (resp){
                 if (resp) {

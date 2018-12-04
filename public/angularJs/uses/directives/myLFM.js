@@ -5,7 +5,7 @@ ngApp.directive('myLfm', function($apply) {
             type: "=type"
         },
         link: function(scope, element, attrs) {
-            if (!scope.type) {
+            if (!scope.type || scope.type == 'undefined' ) {
                 scope.type = "image";
             }
             var domain = SiteUrl + '/admin/laravel-filemanager';
