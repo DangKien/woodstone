@@ -14,21 +14,21 @@
                 <div class="cnct_section1">
                     <ul>
                         <li>
-                            <figure><img src="{{ url('frontend') }}/images/location_icon.png" alt="location Icon"></figure>
+                            <figure><img src="{{ url('Frontend') }}/images/location_icon.png" alt="location Icon"></figure>
                             <div class="cnct_des">
                                 <h4>{{ __('frontend.contact.location') }}</h4>
                                 <h6> {{ @$contact->setting->address }} </h6>
                             </div>
                         </li>
                         <li>
-                            <figure><img src="{{ url('frontend') }}/images/work_icon.png" alt="location Icon"></figure>
+                            <figure><img src="{{ url('Frontend') }}/images/work_icon.png" alt="location Icon"></figure>
                             <div class="cnct_des">
                                 <h4>{{ __('frontend.contact.email') }}</h4>
                                 <h6>{{ @$contact->setting->email }}</h6>
                             </div>
                         </li>
                         <li>
-                            <figure><img src="{{ url('frontend') }}/images/phone_icon.png" alt="location Icon"></figure>
+                            <figure><img src="{{ url('Frontend') }}/images/phone_icon.png" alt="location Icon"></figure>
                             <div class="cnct_des">
                                 <h4>Phone No</h4>
                                 <h6>{{ __('frontend.contact.phone') }}: {{ @$contact->setting->phone }}<br>

@@ -16,7 +16,7 @@
                         <a href="/sub04/sub01.php">View <i class="fa fa-angle-right"> </i></a>
                     </div>
                 </div>
-                <figure><img src="{{ url('frontend') }}/images/product/1.png" alt="icon"></figure>
+                <figure><img src="{{ url('Frontend') }}/images/product/1.png" alt="icon"></figure>
             </li>
             <li>
                 <div class="service_head">
@@ -27,7 +27,7 @@
                         <a href="/sub04/sub01.php">View <i class="fa fa-angle-right"> </i></a>
                     </div>
                 </div>
-                <figure><img src="{{ url('frontend') }}/images/product/2.png" alt="icon"></figure>
+                <figure><img src="{{ url('Frontend') }}/images/product/2.png" alt="icon"></figure>
             </li>
         </ul>
     </div>
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="img col-md-6 text-center">
-                            <img src="{{ url('frontend') }}/images/product/img_rolling01.jpg">
+                            <img src="{{ url('Frontend') }}/images/product/img_rolling01.jpg">
                         </div>
                     </div>
                 @endforeach

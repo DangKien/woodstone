@@ -24,6 +24,7 @@ class CategoryController extends Controller
         $orderName = $request->input('orderName', 'id');
         $orderBy   = $request->input('orderBy', 'desc');
 
+
         $categories = $this->categoryModel
             ->select('categories.id', 'name', 'parent_id', 'depth', 'status')
             ->join('categories_translation as t', 't.category_id', '=', 'categories.id')
