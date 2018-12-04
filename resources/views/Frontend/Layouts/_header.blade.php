@@ -1,4 +1,3 @@
-
 <div class="header_top_area">
     <div class="container">
         <div class="col-md-12">
@@ -25,8 +24,8 @@
             <div class="collapse navbar-collapse col-md-7 col-sm-7 pull-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     @foreach ($menus as $menu)
-                        @if ($menu->parent_id == 0)
-                            <li> <a href="{{ route('home.categories', [$menu->slug, $menu->id]) }}">{{ $menu->name }}</a> </li>
+                        @if (@$menu->parent_id == 0)
+                            <li> <a href="{{ route('home.categories', [@$menu->slug, $menu->id]) }}">{{ @$menu->name }}</a> </li>
                         @endif
                     @endforeach
                     <li> <a href="{{ route('home.news') }}">{{ __('frontend.lable.new_center') }}</a> </li>

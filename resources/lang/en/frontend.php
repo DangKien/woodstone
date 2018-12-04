@@ -7,6 +7,10 @@ return array (
     'email' => 'Email',
     'location' => 'Localtion',
     'phone' => 'Phone',
+    'description_about' => 'Glovane Co., Ltd is a leading supplier of highly
+                        integrated and low-power Digital radio receiver
+                        SoCs',
+    'description_contact' => 'Glovane Co., Ltd. has office in South Korea and Shen-Zhen in China.',
   ),
   'view_more' => 'View',
   'lable' => 
@@ -35,5 +39,7 @@ return array (
     'back' => 'Back',
     'about' => 'About us',
     'quality' => 'Quality',
+    'view' => 'View',
+    'contact' => 'Contact',
   ),
 );

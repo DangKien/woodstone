@@ -8,23 +8,20 @@
         <ul>
             <li>
                 <div class="service_head">
-                    <h4>About Us</h4>
-                    <h6>Glovane Co., Ltd is a leading supplier of highly
-                        integrated and low-power Digital radio receiver
-                        SoCs</h6>
+                    <h4>{{ __('frontend.label.contact') }}</h4>
+                    <h6>{!! __('frontend.contact.description_contact') !!}</h6>
                     <div class="mt25">
-                        <a href="/sub04/sub01.php">View <i class="fa fa-angle-right"> </i></a>
+                        <a href="/sub04/sub01.php">{{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i></a>
                     </div>
                 </div>
                 <figure><img src="{{ url('Frontend') }}/images/product/1.png" alt="icon"></figure>
             </li>
             <li>
                 <div class="service_head">
-                    <h4>Contact Us</h4>
-                    <h6>Glovane Co., Ltd. has office in South Korea and Shen-Zhen in China.
-                    </h6>
+                    <h4>{{ __('frontend.label.about') }}</h4>
+                    <h6>{!! __('frontend.contact.description_about') !!}</h6>
                     <div class="mt26">
-                        <a href="/sub04/sub01.php">View <i class="fa fa-angle-right"> </i></a>
+                        <a href="/sub04/sub01.php">{{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i></a>
                     </div>
                 </div>
                 <figure><img src="{{ url('Frontend') }}/images/product/2.png" alt="icon"></figure>

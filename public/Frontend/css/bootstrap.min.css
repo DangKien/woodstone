@@ -473,10 +473,10 @@ h2, h3 {
 .glyphicon-eject:before {
 	content: "\e078"
 }
-.glyphicon-chevron-left:before {
+.fa-chevron-left:before {
 	content: "\e079"
 }
-.glyphicon-chevron-right:before {
+.fa-chevron-right:before {
 	content: "\e080"
 }
 .glyphicon-plus-sign:before {
@@ -5439,18 +5439,18 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 	outline: 0;
 	opacity: .9
 }
-.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+.carousel-control .fa-chevron-left, .carousel-control .fa-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
 	position: absolute;
 	top: 50%;
 	z-index: 5;
 	display: inline-block;
 	margin-top: -10px
 }
-.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+.carousel-control .fa-chevron-left, .carousel-control .icon-prev {
 	left: 50%;
 	margin-left: -10px
 }
-.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+.carousel-control .fa-chevron-right, .carousel-control .icon-next {
 	right: 50%;
 	margin-right: -10px
 }
@@ -5511,16 +5511,16 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 	text-shadow: none
 }
 @media screen and (min-width:768px) {
-.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+.carousel-control .fa-chevron-left, .carousel-control .fa-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
 	width: 30px;
 	height: 30px;
 	margin-top: -10px;
 	font-size: 30px
 }
-.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+.carousel-control .fa-chevron-left, .carousel-control .icon-prev {
 	margin-left: -10px
 }
-.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+.carousel-control .fa-chevron-right, .carousel-control .icon-next {
 	margin-right: -10px
 }
 .carousel-caption {

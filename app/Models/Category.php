@@ -10,13 +10,13 @@ class Category extends MyModel
 {
     use Translatable;
 
-    protected $talbe = 'home_product_id';
+    protected $talbe = 'categories';
 
     protected $translationModel = "App\Models\CategoryTranslation";
 
     protected $translatedAttributes = ['name', 'description', 'slug', 'meta_title', 'meta_description', 'meta_keyword'];
 
-    public $translationForeignKey = 'home_id';
+    public $translationForeignKey = 'category_id';
 
     public function filterName($params) {
 	    if (!empty($params) ) {
