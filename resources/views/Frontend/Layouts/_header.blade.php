@@ -6,9 +6,9 @@
                     <a href="{{ route('home.index') }}"><i class="fa  fa"></i>{{ __('frontend.lable.home') }}</a>
                     <a href="{{ route('home.contact') }}">|<i class="fa  fa"></i>{{ __('frontend.lable.contact_us') }} </a>
                     <a>|</a>
-                    <a class="{{ $_COOKIE['locale'] == 'en' || !isset($_COOKIE['locale']) ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'en']) }}"> En </a>
+                    <a class="{{ isset($_COOKIE['locale']) && ($_COOKIE['locale'] == 'en' || !isset($_COOKIE['locale']) ) ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'en']) }}"> En </a>
                     <a>|</a>
-                    <a class="{{ $_COOKIE['locale'] == 'tw' ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'tw']) }}"> Tw </a>
+                    <a class="{{ (isset($_COOKIE['locale']) && $_COOKIE['locale'] ) == 'tw' ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'tw']) }}"> Tw </a>
                 </div>
             </div>
         </div>
