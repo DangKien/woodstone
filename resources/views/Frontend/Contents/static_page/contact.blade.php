@@ -40,47 +40,11 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="cnct_frm">
-            <div class="container">
-                <div class="row">
-                    <div class="blog_section3">
-                        <div class="site-section-area">
-                            <h2>Have Any Question</h2>
-                            <h6>The Best Choice of Organic Foods</h6>
-                        </div>
-                        <div class="comment_frm">
-                            <ul>
-                                <li>
-                                    <input type="text" placeholder="Your Name*">
-                                </li>
-                                <li>
-                                    <input type="text" placeholder="Your Email*">
-                                </li>
-                                <li>
-                                    <input type="text" placeholder="Phone No*">
-                                </li>
-                                <li>
-                                    <input type="text" placeholder="Subject*">
-                                </li>
-                                <li>
-                                    <textarea placeholder="Your Review*"></textarea>
-                                </li>
-                            </ul>
-                            <p>
-                                <button class="cmn_btn1">send message</button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="cnct_map">
-            {{ @$contact->setting->gg_map }}
+            {{ @$contact->setting->google_map }}
         </div>
     </div>
 @endsection
-
-
 @section ('myJs')
 @endsection
 @section ('myCss')
