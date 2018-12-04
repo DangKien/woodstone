@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="cnct_map">
-            {{ @$contact->setting->google_map }}
+            {!!  @$contact->setting->google_map  !!}
         </div>
     </div>
 @endsection
