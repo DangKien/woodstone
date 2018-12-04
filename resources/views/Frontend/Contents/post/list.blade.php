@@ -13,9 +13,9 @@
             <div class="product-detail">
                 <div class="row">
                     {{--Category--}}
-                    @includeIf('Frontend.Layouts._sidebar')
+                    {{--@includeIf('Frontend.Layouts._sidebar')--}}
                     {{--End category--}}
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="recent_news_area blog_page spacer">
                             <div class="row">
                                 @foreach ($posts as $item)

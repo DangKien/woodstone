@@ -5,10 +5,10 @@
                 <div class="login_bx">
                     <a href="{{ route('home.index') }}"><i class="fa  fa"></i>{{ __('frontend.lable.home') }}</a>
                     <a href="{{ route('home.contact') }}">|<i class="fa  fa"></i>{{ __('frontend.lable.contact_us') }} </a>
-                    <a>|</a>
-                    <a class="{{ App::getLocale() == 'en' || isset($_COOKIE['locale']) && $_COOKIE['locale'] == 'en' ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'en']) }}"> En {{ $_COOKIE['locale'] }} </a>
-                    <a>|</a>
-                    <a class="{{ ( isset($_COOKIE['locale']) && $_COOKIE['locale'] == 'tw'  ) ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'tw']) }}"> Tw </a>
+                    <a class="">|</a>
+                    <a class="lang {{ App::getLocale() == 'en' || isset($_COOKIE['locale']) && $_COOKIE['locale'] == 'en' ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'en']) }}"> En </a>
+                    <a class="lang">|</a>
+                    <a class="lang {{ ( isset($_COOKIE['locale']) && $_COOKIE['locale'] == 'tw'  ) ? 'active' : '' }}" href="{{ route('home.locale', ['locale' => 'tw']) }}"> Tw </a>
                 </div>
             </div>
         </div>

@@ -2477,3 +2477,11 @@ p a:hover {
 .header_top_area .login_bx a.active {
 	color:#9fcb32;
 }
+
+.cnct_map iframe {
+	width: 100%;
+}
+
+.header_top_area .login_bx a.lang {
+	padding-left: 5px;
+}
