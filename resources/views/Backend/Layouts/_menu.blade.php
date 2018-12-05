@@ -111,19 +111,18 @@
                                 <i class="arrow"></i>
                             </a>                    
                             <ul class="collapse">
-                                <li class="{{ request()->is('admin/languages') || request()->is('admin/languages/*') ? 'active-link': '' }}">
+                               <!--  <li class="{{ request()->is('admin/languages') || request()->is('admin/languages/*') ? 'active-link': '' }}">
                                     <a href="{{ route('languages.index') }}"><i class="ti-angle-double-right">
                                     </i>{!! trans('backend.menu.language')  !!}</a>
+                                </li> -->
+                                <li class="{{ request()->is('admin/slides') || request()->is('admin/slides/*') ? 'active-link': '' }}">
+                                    <a href="{{ route('slides.index') }}"><i class="ti-angle-double-right">
+                                        </i>{!! trans('backend.menu.slide')  !!}</a>
                                 </li>
 
                                 <li class="{{ request()->is('admin/setting') || request()->is('admin/setting/*') ? 'active-link': '' }}">
                                     <a href="{{ route('setting.index') }}"><i class="ti-angle-double-right">
                                         </i>{!! trans('backend.menu.setting')  !!}</a>
-                                </li>
-
-                                <li class="{{ request()->is('admin/slides') || request()->is('admin/slides/*') ? 'active-link': '' }}">
-                                    <a href="{{ route('slides.index') }}"><i class="ti-angle-double-right">
-                                        </i>{!! trans('backend.menu.slide')  !!}</a>
                                 </li>
 
                             </ul>

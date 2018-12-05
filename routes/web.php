@@ -59,7 +59,7 @@ Route::group(['prefix' => '', 'middleware' => 'role:superadmin'], function() {
     Route::resource('admin/permissions-group', '\DangKien\RolePer\Controllers\PermissionGroupController');
 });
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function() {
+Route::group(['prefix' => 'admin', 'namespace' => 'Backend', 'middleware' => 'auth'], function() {
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
     
@@ -98,8 +98,8 @@ Route::group(['prefix' => 'rest/admin', 'namespace' => 'Backend'], function() {
     Route::get('users', 'UserController@getList');
     Route::delete('users/{id}', 'UserController@destroy');
 
-    Route::get('languages', 'LanguagesController@list');
-    Route::delete('languages/{id}', 'LanguagesController@destroy');
+    // Route::get('languages', 'LanguagesController@list');
+    // Route::delete('languages/{id}', 'LanguagesController@destroy');
 
     Route::get('categories', 'CategoryController@list');
     Route::delete('categories/{id}', 'CategoryController@destroy');
