@@ -622,7 +622,8 @@ ul {
 	height: 275px;
 	line-height: 275px;
 	position: relative;
-	margin-bottom: 30px
+	margin-bottom: 30px;
+	overflow: hidden;
 }
 .category_tab_area .cat_item h5 {
 	font-size: 15px;
