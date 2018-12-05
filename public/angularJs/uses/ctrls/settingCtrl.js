@@ -103,13 +103,9 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
                     {
                         'address': $scope.data.contact.address || '',
                         'phone'  : $scope.data.contact.phone || '',
-                        'worktime' : $scope.data.contact.worktime || '',
                         'fax' : $scope.data.contact.fax || '',
                         'email': $scope.data.contact.email || '',
-                        'fb': $scope.data.contact.fb || '',
-                        'youtube'  : $scope.data.contact.youtube || '',
-                        'instagram' : $scope.data.contact.instagram || '',
-                        'zalo' : $scope.data.contact.zalo || '',
+                        'copy_right' : $scope.data.contact.copy_right || '',
                         'google_map' : $scope.data.contact.google_map || '',
                         'google_analytic': $scope.data.contact.google_analytic || '',
                         'fb_pixel' : $scope.data.contact.fb_pixel

@@ -27,7 +27,7 @@
                     <h6><span>{{ __('frontend.contact.phone') }}:</span> {{ @$contact->setting->phone }}</h6>
                 </div>
             </div>
-            <div class="copyright_area"><span>Cassandra</span> -  Design by <span><a href="" target="_blank">DigitalCenturySF</a></span></div>holder
+            <div class="copyright_area"><span>{{ @$contact->setting->copy_right }}</span></div>
         </div>
     </div>
 </footer>

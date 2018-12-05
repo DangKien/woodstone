@@ -42,13 +42,6 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label class="control-label">{!! trans('backend.setting.work_time') !!}</label>
-                                                        <input type="text" class="form-control" ng-model="data.contact.worktime"
-                                                               required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
                                                         <label class="control-label">{!! trans('backend.setting.fax') !!}</label>
                                                         <input type="text" class="form-control" ng-model="data.contact.fax"
                                                                required>
@@ -61,31 +54,11 @@
                                                                required>
                                                     </div>
                                                 </div>
+
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label class="control-label">{!! trans('backend.setting.facebook') !!}</label>
-                                                        <input type="text" class="form-control" ng-model="data.contact.fb"
-                                                               required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label class="control-label">{!! trans('backend.setting.youtube') !!}</label>
-                                                        <input type="text" class="form-control" ng-model="data.contact.youtube"
-                                                               required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label class="control-label">{!! trans('backend.setting.instagram') !!}</label>
-                                                        <input type="text" class="form-control" ng-model="data.contact.instagram"
-                                                               required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label class="control-label">{!! trans('backend.setting.zalo') !!}</label>
-                                                        <input type="text" class="form-control" ng-model="data.contact.zalo"
+                                                        <label class="control-label">{!! trans('backend.setting.copy_right') !!}</label>
+                                                        <input type="text" class="form-control" ng-model="data.contact.copy_right"
                                                                required>
                                                     </div>
                                                 </div>
