@@ -3,6 +3,7 @@
 @section ('content')
     @php
         $banners = app('Setting')->getBanner();
+        $contact = app('Setting')->getContact();
     @endphp
     <div class="inner_top_area mrzn_zero" style="background-image: url({{ url('').@$banners->setting->contact }});">
         <h2>{{ __('frontend.label.contact') }}</h2>
