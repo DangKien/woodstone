@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Laravel - ReactJS - Nifty 2.*</title>
+        <title>{{ __('backend.login.label') }}</title>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
         <link href="{{ url('Nifty') }}/css/nifty.min.css" rel="stylesheet">
         <!-- Nifty front awesome -->
@@ -26,13 +26,13 @@
                 <div class="cls-content-sm panel">
                     <div class="panel-body" style="background-color: #fff">
                         <div class="mar-ver pad-btm">
-                            <h1 class="h3">Account Login</h1>
-                            <p>Sign In to your account</p>
+                            <h1 class="h3">{{ __('backend.login.label') }}</h1>
+                            <p>{{ __('backend.login.sign_in') }}</p>
                         </div>
                         <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                             @csrf
                             <div class="form-group">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" placeholder="{{ __('backend.login.email') }}" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -40,7 +40,7 @@
                                 @endif
                             </div>
                             <div class="form-group">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" placeholder="{{ __('backend.login.password') }}" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
