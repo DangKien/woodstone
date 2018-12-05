@@ -2407,7 +2407,9 @@ header .dropdown-submenu .dropdown-menu {
 .category_top_menu ul li.has-sub.open a.active {
 	color: #9fcb32;
 }
-
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+	max-width: unset;
+}
 .category_top_menu ul li.has-sub span.holder::before {
     color: #2c2c2c;
     content: "+";
