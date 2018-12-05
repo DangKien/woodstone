@@ -19,6 +19,9 @@
                             <li>
                                 <a data-toggle="tab" href="#tab-4">{!! trans('backend.setting.setting_home') !!}</a>
                             </li>
+                            <li>
+                                <a data-toggle="tab" href="#tab-5">{!! trans('backend.setting.setting_banner') !!}</a>
+                            </li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-1" class="tab-pane fade active in">
@@ -224,6 +227,106 @@
                                                 </button>
                                             </div>
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-5" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                    <a data-input="banner_product" data-preview="preview_banner_product" class="my-lfm btn btn-primary" type="image">
+                                                       <i class="fa fa-picture-o"></i> {!! trans('backend.setting.banner_product') !!}
+                                                    </a>
+                                                    </span>
+                                                        <input id="banner_product" class="form-control" type="text" name="main_image"
+                                                               ng-model="data.banner.product"  style="display: none">
+                                                    </div>
+                                                    <img id="preview_banner_product"  ng-src="{{ url('') }}/@{{ data.banner.product }}" style="margin-top:15px; margin-bottom: 5px; height:100px; max-width:180px">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                    <a data-input="banner_news" data-preview="preview_banner_news" class="my-lfm btn btn-primary" type="image">
+                                                       <i class="fa fa-picture-o"></i> {!! trans('backend.setting.banner_news') !!}
+                                                    </a>
+                                                    </span>
+                                                        <input id="banner_news" class="form-control" type="text" name="main_image" ng-model="data.banner.news"  style="display: none">
+                                                    </div>
+                                                    <img id="preview_banner_news"  ng-src="{{ url('') }}/@{{ data.banner.news }}" style="margin-top:15px; margin-bottom: 5px; height:100px; max-width:180px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                    <a data-input="banner_product_detail" data-preview="preview_banner_product_detail" class="my-lfm btn btn-primary" type="image">
+                                                       <i class="fa fa-picture-o"></i> {!! trans('backend.setting.banner_product_detail') !!}
+                                                    </a>
+                                                    </span>
+                                                        <input id="banner_product_detail" class="form-control" type="text" name="main_image"
+                                                               ng-model="data.banner.product_detail"  style="display: none">
+                                                    </div>
+                                                    <img id="preview_banner_product_detail"  ng-src="{{ url('') }}/@{{ data.banner.product_detail }}" style="margin-top:15px; margin-bottom: 5px; height:100px; max-width:180px">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                    <a data-input="banner_news_detail" data-preview="preview_banner_news_detail" class="my-lfm btn btn-primary" type="image">
+                                                       <i class="fa fa-picture-o"></i> {!! trans('backend.setting.banner_news_detail') !!}
+                                                    </a>
+                                                    </span>
+                                                        <input id="banner_news_detail" class="form-control" type="text" name="main_image" ng-model="data.banner.news_detail"  style="display: none">
+                                                    </div>
+                                                    <img id="preview_banner_news_detail"  ng-src="{{ url('') }}/@{{ data.banner.news_detail }}" style="margin-top:15px; margin-bottom: 5px; height:100px; max-width:180px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                    <a data-input="banner_contact" data-preview="preview_banner_contact" class="my-lfm btn btn-primary" type="image">
+                                                       <i class="fa fa-picture-o"></i> {!! trans('backend.setting.banner_contact') !!}
+                                                    </a>
+                                                    </span>
+                                                        <input id="banner_contact" class="form-control" type="text" name="main_image"
+                                                               ng-model="data.banner.contact"  style="display: none">
+                                                    </div>
+                                                    <img id="preview_banner_contact"  ng-src="{{ url('') }}/@{{ data.banner.contact }}" style="margin-top:15px; margin-bottom: 5px; height:100px; max-width:180px">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                    <a data-input="banner_about" data-preview="preview_banner_about" class="my-lfm btn btn-primary" type="image">
+                                                       <i class="fa fa-picture-o"></i> {!! trans('backend.setting.banner_about') !!}
+                                                    </a>
+                                                    </span>
+                                                        <input id="banner_about" class="form-control" type="text" name="main_image"
+                                                               ng-model="data.banner.about"  style="display: none">
+                                                    </div>
+                                                    <img id="preview_banner_about"  ng-src="{{ url('') }}/@{{ data.banner.about }}" style="margin-top:15px; margin-bottom: 5px; height:100px; max-width:180px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="button" ng-click="actions.saveBanner()" class="btn btn-primary btn-block">
+                                                <i class="fa fa-save"></i> {{ trans('backend.actions.send') }}
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

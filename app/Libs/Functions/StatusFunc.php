@@ -75,14 +75,14 @@
 	    }
 	}
 
-	function showCategory ($arrs, $parent = 0, $active) {
-		echo $parent == 0 ? '<ul class="shop_toggle">' : '<ul class="categorie_sub">';
+	function showCategory ($arrs, $parent = 0, $active = array(), $select = 0) {
+		echo $parent == 0 ? '<ul class="shop_toggle">' : (in_array($parent, $active) ? '<ul class="categorie_sub" style="display: block">' : '<ul class="categorie_sub">' );
 		foreach ($arrs as $key => $arr) {
 			if ($arr->parent_id == $parent) {
-				echo  $arr->hasParent == 1 ? '<li class="has-sub">' : '<li>';
+				echo  $arr->hasParent == 1 ? (in_array($arr->id, $active) ? '<li class="has-sub open">' : '<li class="has-sub ">' ) : '<li>';
 	            echo '<p><a href="'.route('home.categories',[$arr->slug, $arr->id]).'"> '.$arr->name.'</a></p>';
 				unset($arrs[$key]);
-				showCategory($arrs, $arr->id, $active);
+				showCategory($arrs, $arr->id, $active, $select = 0);
 				echo '</li>';
 			}
 		}

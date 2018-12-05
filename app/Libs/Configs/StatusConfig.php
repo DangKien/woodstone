@@ -16,6 +16,7 @@ class StatusConfig {
 	const CONST_SEO_DEFAULT = "SEO_DEFAULT";
 	const CONST_LOGO = "LOGO";
 	const CONST_SETTING_HOME= "SETTING_HOME";
+	const CONST_SETTING_BANNER= "BANNER";
 
 
 }

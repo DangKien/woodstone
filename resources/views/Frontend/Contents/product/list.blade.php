@@ -1,7 +1,10 @@
 @extends('Frontend.Layouts.default')
 
 @section ('content')
-    <div class="inner_top_area">
+    @php
+        $banners = app('Setting')->getBanner();
+    @endphp
+    <div class="inner_top_area" style="background-image: url({{ url('').@$banners->setting->product }});">
         <h2>Forward in Advance</h2>
         <h5> <a href="{{ route('home.index') }}"> {{ __('frontend.lable.home') }} | </a>
             @foreach ($breadcrumb as $key => $item)
@@ -18,7 +21,7 @@
             <div class="product-detail">
                 <div class="row">
                     {{--Category--}}
-                        @includeIf('Frontend.Layouts._sidebar')
+                        @includeIf('Frontend.Layouts._sidebar', array('depth' => $category->depth))
                     {{--End category--}}
                     <div class="col-md-8">
                         <ol class="breadcrumb text-left">

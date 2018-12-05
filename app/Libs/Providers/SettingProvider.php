@@ -48,4 +48,13 @@ class SettingProvider {
 		return $data;
 	}
 
+	public function getBanner() {
+		$data = $this->settingModel->where('key', StatusConfig::CONST_SETTING_BANNER)
+									->first();
+		if (!empty($data->setting)) {
+			$data->setting = json_decode($data->setting);
+		}
+		return $data;
+	}
+
 }

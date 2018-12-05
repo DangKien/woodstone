@@ -1,7 +1,6 @@
 @php
     $categories = app('Home')->getMenu();
-    $active = 1;
-
+    $active = @$depth ? explode('/', $depth) : array();
 @endphp
 <div class="col-md-4">
     <div class="shop_sidebar">

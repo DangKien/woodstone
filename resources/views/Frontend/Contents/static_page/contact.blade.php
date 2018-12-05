@@ -2,9 +2,9 @@
 
 @section ('content')
     @php
-        $contact = app('Setting')->getContact();
+        $banners = app('Setting')->getBanner();
     @endphp
-    <div class="inner_top_area mrzn_zero">
+    <div class="inner_top_area mrzn_zero" style="background-image: url({{ url('').@$banners->setting->contact }});">
         <h2>{{ __('frontend.label.contact') }}</h2>
         <h5><a href="{{ route('home.index') }}">{{ __('frontend.lable.home') }}</a> | {{ __('frontend.label.contact') }} </h5>
     </div>

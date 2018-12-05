@@ -1,7 +1,10 @@
 @extends('Frontend.Layouts.default')
 
 @section ('content')
-    <div class="inner_top_area">
+    @php
+        $banners = app('Setting')->getBanner();
+    @endphp
+    <div class="inner_top_area" style="background-image: url({{ url('').@$banners->setting->news_detail }});">
         <h2>{{ __('frontend.lable.new_center') }}</h2>
         <h5>
             <a href="{{ route('home.index') }}"> {{ __('frontend.lable.home') }} | </a>
@@ -14,9 +17,9 @@
             <div class="product-detail">
                 <div class="row">
                     {{--Category--}}
-                    @includeIf('Frontend.Layouts._sidebar')
+                    {{--@includeIf('Frontend.Layouts._sidebar')--}}
                     {{--End category--}}
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="recent_news_area blog_page spacer">
                             <h2 class="text-center">
                                 {!! $post->title  !!}

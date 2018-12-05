@@ -34,6 +34,9 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
                         $scope.data.description_home = value.setting
                     }
 
+                    if (value.key == 'BANNER') {
+                        $scope.data.banner = value.setting
+                    }
 
                 });
             }, function (error) {
@@ -87,6 +90,28 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
                         'description_contact' : $scope.data.description_home.description_contact || '',
                     }),
                 'key' : 'SETTING_HOME'
+            }
+            $settingService.action.insertSetting(params).then(function (resp){
+                if (resp) {
+                    $myNotify.success('Success')
+                }
+            }, function (error) {
+                $myNotify.error('Error')
+            });
+        },
+
+        saveBanner: function () {
+            let params = {
+                'setting': JSON.stringify(
+                    {
+                        'contact': $scope.data.banner.contact || '',
+                        'about' : $scope.data.banner.about || '',
+                        'news_detail' : $scope.data.banner.news_detail || '',
+                        'news' : $scope.data.banner.news || '',
+                        'product' : $scope.data.banner.product || '',
+                        'product_detail' : $scope.data.banner.product_detail || '',
+                    }),
+                'key' : 'BANNER'
             }
             $settingService.action.insertSetting(params).then(function (resp){
                 if (resp) {

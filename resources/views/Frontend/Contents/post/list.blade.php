@@ -1,7 +1,10 @@
 @extends('Frontend.Layouts.default')
 
 @section ('content')
-    <div class="inner_top_area">
+    @php
+        $banners = app('Setting')->getBanner();
+    @endphp
+    <div class="inner_top_area" style="background-image: url({{ url('').@$banners->setting->news }});">
         <h2>{{ __('frontend.lable.new_center') }}</h2>
         <h5>
             <a href="{{ route('home.index') }}"> {{ __('frontend.lable.home') }} | </a>

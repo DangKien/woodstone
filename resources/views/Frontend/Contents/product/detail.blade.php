@@ -1,7 +1,10 @@
 @extends('Frontend.Layouts.default')
 
 @section ('content')
-    <div class="inner_top_area">
+    @php
+        $banners = app('Setting')->getBanner();
+    @endphp
+    <div class="inner_top_area" style="background-image: url({{ url('').@$banners->setting->product_detail }});">
         <h2>Forward in Advance</h2>
         <!-- <h5>Home / Products List</h5> -->
     </div>
@@ -26,7 +29,7 @@
                                         <a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">{{ __('frontend.product.overview') }}</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#featrue" aria-controls="featrue" role="tab" data-toggle="tab">{{ __('frontend.product.feature') }}</a>
+                                        <a href="#featrue" aria-controls="feature" role="tab" data-toggle="tab">{{ __('frontend.product.feature') }}</a>
                                     </li>
                                 </ul>
                             </div>
