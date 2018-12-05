@@ -2400,6 +2400,13 @@ header .dropdown-submenu .dropdown-menu {
     transform: translateY(-50%);
     width: 15px;
 }
+.category_top_menu ul li.has-sub.open>p>span.holder::before {
+	content: "-";
+}
+
+.category_top_menu ul li.has-sub.open a.active {
+	color: #9fcb32;
+}
 
 .category_top_menu ul li.has-sub span.holder::before {
     color: #2c2c2c;

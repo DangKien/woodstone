@@ -1,6 +1,7 @@
 @php
     $categories = app('Home')->getMenu();
     $active = @$depth ? explode('/', $depth) : array();
+    $select = @$cate_id;
 @endphp
 <div class="col-md-4">
     <div class="shop_sidebar">
@@ -9,7 +10,7 @@
                 <div class="widget_title">
                     <h3>{{ __('frontend.sidebar.product') }}</h3>
                 </div>
-                {{ showCategory($categories, 0, $active) }}
+                {{ showCategory($categories, 0, $active, $select) }}
             </div>
         </div>
     </div>

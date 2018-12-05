@@ -80,9 +80,10 @@
 		foreach ($arrs as $key => $arr) {
 			if ($arr->parent_id == $parent) {
 				echo  $arr->hasParent == 1 ? (in_array($arr->id, $active) ? '<li class="has-sub open">' : '<li class="has-sub ">' ) : '<li>';
-	            echo '<p><a href="'.route('home.categories',[$arr->slug, $arr->id]).'"> '.$arr->name.'</a></p>';
+	            echo $select ==  $arr->id ? '<p><a class="active" href="'.route('home.categories',[$arr->slug, $arr->id]).'"> '.$arr->name.'</a></p>' :
+		                '<p><a href="'.route('home.categories',[$arr->slug, $arr->id]).'"> '.$arr->name.'</a></p>';
 				unset($arrs[$key]);
-				showCategory($arrs, $arr->id, $active, $select = 0);
+				showCategory($arrs, $arr->id, $active, $select);
 				echo '</li>';
 			}
 		}

@@ -3,6 +3,7 @@
 @section ('content')
     @php
         $banners = app('Setting')->getBanner();
+
     @endphp
     <div class="inner_top_area" style="background-image: url({{ url('').@$banners->setting->product_detail }});">
         <h2>Forward in Advance</h2>
@@ -12,7 +13,7 @@
         <div class="container">
             <div class="product-detail">
                 <div class="row">
-                    @includeIf('Frontend.Layouts._sidebar')
+                    @includeIf('Frontend.Layouts._sidebar', array('depth' => $category->depth, 'cate_id' => $product->category_id))
                     <div class="col-md-8">
                         <div class="product">
                             <ol class="breadcrumb text-left">

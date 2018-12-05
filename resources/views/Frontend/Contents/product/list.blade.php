@@ -21,7 +21,7 @@
             <div class="product-detail">
                 <div class="row">
                     {{--Category--}}
-                        @includeIf('Frontend.Layouts._sidebar', array('depth' => $category->depth))
+                        @includeIf('Frontend.Layouts._sidebar', array('depth' => $category->depth, 'cate_id' => $category->id))
                     {{--End category--}}
                     <div class="col-md-8">
                         <ol class="breadcrumb text-left">
