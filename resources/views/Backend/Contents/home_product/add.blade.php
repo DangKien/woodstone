@@ -128,7 +128,7 @@
                                                                 <div class="col-sm-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label text-bold">
-                                                                            {!! trans('backend.home_product.image') !!} <span class="text-danger"> (*)</span>
+                                                                            {!! trans('backend.home_product.image') !!} <span class="text-danger">{!! trans('backend.home_product.size_image') !!} (*)</span>
                                                                         </label>
                                                                         <div class="input-group">
                                                                             <span class="input-group-btn">
