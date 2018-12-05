@@ -1904,12 +1904,15 @@ footer .footer_area .footer_bx3 .product_des div i {
 	margin-top: -150px;
 }
 .cnct_wrapper .cnct_section1 {
-	    background: #fff;
+    background: #fff;
     padding: 25px;
+}
+.cnct_wrapper .cnct_section1 ul {
+    overflow: auto;
 }
 .cnct_wrapper .cnct_section1 li {
 	width: 30%;
-	display: inline-block;
+    float: left;
 	margin-right: 3%;
 }
 .cnct_map {

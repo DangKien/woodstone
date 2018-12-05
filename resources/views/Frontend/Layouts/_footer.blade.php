@@ -21,13 +21,13 @@
                 @endforeach
                 <div class="footer_bx footer_bx3">
                     <img src="{{ url('').@$logo->setting->bottom }}" alt="">
-                    <h6><span>{{ __('frontend.contact.fax') }}:</span> {{ @$contact->setting->fax }}</h6>
-                    <h6><span>{{ __('frontend.contact.email') }}:</span> {{ @$contact->setting->email }}</h6>
-                    <h6><span>{{ __('frontend.contact.location') }}:</span>  {{ @$contact->setting->address }} </h6>
-                    <h6><span>{{ __('frontend.contact.phone') }}:</span> {{ @$contact->setting->phone }}</h6>
+                    <h6><span>{{ __('frontend.contact.fax') }}:</span> {{ @$contact->setting['fax'][$lang->id] }}</h6>
+                    <h6><span>{{ __('frontend.contact.email') }}:</span> {{ @$contact->setting['email'][$lang->id] }}</h6>
+                    <h6><span>{{ __('frontend.contact.location') }}:</span>  {{ @$contact->setting['address'][$lang->id] }} </h6>
+                    <h6><span>{{ __('frontend.contact.phone') }}:</span> {{ @$contact->setting['phone'][$lang->id] }}</h6>
                 </div>
             </div>
-            <div class="copyright_area"><span>{{ @$contact->setting->copy_right }}</span></div>
+            <div class="copyright_area"><span>{{ @$contact->setting['copy_right'][$lang->id] }}</span></div>
         </div>
     </div>
 </footer>

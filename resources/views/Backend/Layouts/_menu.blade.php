@@ -90,10 +90,10 @@
                                         </i>{!! trans('backend.menu.about') !!}</a>
                                 </li>
 
-                                <li class="{{ request()->is('admin/static-page/quanlity') || request()->is('admin//static-page/quanlity/*') ? 'active-link': '' }}">
-                                    <a href="{{ route('quanlity.index') }}"><i class="ti-angle-double-right">
-                                        </i>{!! trans('backend.menu.quanlity') !!}</a>
-                                </li>
+                                {{--<li class="{{ request()->is('admin/static-page/quanlity') || request()->is('admin//static-page/quanlity/*') ? 'active-link': '' }}">--}}
+                                    {{--<a href="{{ route('quanlity.index') }}"><i class="ti-angle-double-right">--}}
+                                        {{--</i>{!! trans('backend.menu.quanlity') !!}</a>--}}
+                                {{--</li>--}}
                             </ul>
                         </li>
 

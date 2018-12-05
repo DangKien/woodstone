@@ -16,7 +16,7 @@ class SettingProvider {
 		$data = $this->settingModel->where('key', StatusConfig::CONST_CONTACT)
 									->first();
 		if (!empty($data->setting)) {
-			$data->setting = json_decode($data->setting);
+			$data->setting = json_decode($data->setting, true);
 		}
 		return $data;
 	}
@@ -43,7 +43,7 @@ class SettingProvider {
 		$data = $this->settingModel->where('key', StatusConfig::CONST_SETTING_HOME)
 			->first();
 		if (!empty($data->setting)) {
-			$data->setting = json_decode($data->setting);
+			$data->setting = json_decode($data->setting, true);
 		}
 		return $data;
 	}
@@ -56,5 +56,6 @@ class SettingProvider {
 		}
 		return $data;
 	}
+
 
 }

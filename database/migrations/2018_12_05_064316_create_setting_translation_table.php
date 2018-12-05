@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSettingTable extends Migration
+class CreateSettingTranslationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateSettingTable extends Migration
      */
     public function up()
     {
-        Schema::create('setting', function (Blueprint $table) {
+        Schema::create('setting_translation', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('key');
+	        $table->text('setting');
+	        $table->string('locale');
+	        $table->integer('setting_id');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateSettingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('setting');
+        Schema::dropIfExists('setting_translation');
     }
 }

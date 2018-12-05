@@ -10,7 +10,7 @@
             <li>
                 <div class="service_head">
                     <h4>{{ __('frontend.label.about') }}</h4>
-                    <h6>{!! \Illuminate\Support\Str::words(@$settingHome->setting->description_about, 18, " ...") !!}</h6>
+                    <h6>{!! \Illuminate\Support\Str::words(@$settingHome->setting['description_about'][$lang->id], 18, " ...") !!}</h6>
                     <a href="{{ route('home.about') }}">
                         <div class="mt25">
                             {{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i>
@@ -22,7 +22,7 @@
             <li>
                 <div class="service_head">
                     <h4>{{ __('frontend.label.contact') }}</h4>
-                    <h6>{!! \Illuminate\Support\Str::words(@$settingHome->setting->description_contact, 18, " ...")!!}</h6>
+                    <h6>{!! \Illuminate\Support\Str::words(@$settingHome->setting['description_contact'][$lang->id], 18, " ...")!!}</h6>
                     <a href="{{ route('home.contact') }}">
                         <div class="mt26">
                             {{ __('frontend.label.view') }} <i class="fa fa-angle-right"> </i>

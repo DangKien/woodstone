@@ -191,7 +191,7 @@ class SlideController extends Controller
         $rules = array(
 			// 'title'     => 'required|between:1,255',
 			'image' => 'required|between:1,255',
-			'link'  => 'required|between:1,255',
+//			'link'  => 'required|between:1,255',
 			'status'    => ['required', Rule::in([StatusConfig::CONST_AVAILABLE, StatusConfig::CONST_DISABLE])]
         );
         $messages = array();

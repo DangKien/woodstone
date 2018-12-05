@@ -56,7 +56,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $categories = app('Category')->listCategory('vi');
+        $categories = app('Category')->listCategory(App::getLocale());
 
         return view('Backend.Contents.category.add', 
                             array('categories' => $categories) );
@@ -118,7 +118,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = $this->categoryModel->findOrFail($id);
-        $categories = app('Category')->listCategory('vi');
+        $categories = app('Category')->listCategory(App::getLocale());
   
         return view('Backend.Contents.category.add', array('category' => $category, 
                                                         'categories' => $categories));

@@ -18,22 +18,22 @@
                             <figure><img src="{{ url('Frontend') }}/images/location_icon.png" alt="location Icon"></figure>
                             <div class="cnct_des">
                                 <h4>{{ __('frontend.contact.location') }}</h4>
-                                <h6> {{ @$contact->setting->address }} </h6>
+                                <h6> {{ @$contact->setting['address'][$lang->id] }} </h6>
                             </div>
                         </li>
                         <li>
                             <figure><img src="{{ url('Frontend') }}/images/work_icon.png" alt="location Icon"></figure>
                             <div class="cnct_des">
                                 <h4>{{ __('frontend.contact.email') }}</h4>
-                                <h6>{{ @$contact->setting->email }}</h6>
+                                <h6>{{ @$contact->setting['email'][$lang->id] }}</h6>
                             </div>
                         </li>
                         <li>
                             <figure><img src="{{ url('Frontend') }}/images/phone_icon.png" alt="location Icon"></figure>
                             <div class="cnct_des">
                                 <h4>{{ __('frontend.contact.phone') }}</h4>
-                                <h6>{{ __('frontend.contact.phone') }}: {{ @$contact->setting->phone }}<br>
-                                    {{ __('frontend.contact.fax') }}: {{ @$contact->setting->fax }}
+                                <h6>{{ __('frontend.contact.phone') }}: {{ @$contact->setting['phone'][$lang->id] }}<br>
+                                    {{ __('frontend.contact.fax') }}: {{ @$contact->setting['fax'][$lang->id] }}
                                 </h6>
                             </div>
                         </li>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="cnct_map">
-            {!!  @$contact->setting->google_map  !!}
+            {!!  @$contact->setting['google_map'][$lang->id]  !!}
         </div>
     </div>
 @endsection

@@ -15,10 +15,10 @@ class AppProvider extends ServiceProvider
      */
     public function boot()
     {
-//	    View::composer('Frontend.*', function ($view) {
-//		    $seo = app('Setting')->getSeo();
-//		    $view->with('seo', $seo);
-//	    });
+	    View::composer('Frontend.*', function ($view) {
+		    $lang = app('Language')->getLangCurrent();
+		    $view->with('lang', $lang);
+	    });
         $this->app->singleton('Language', function ($app) {
             return new \App\Libs\Providers\Language();
         });

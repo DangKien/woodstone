@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
 use App\Models\MyModel;
 
+
 class Category extends MyModel
 {
     use Translatable;

@@ -40,17 +40,17 @@
 			                            </div>
 			                        </div> 
 					
-			                        <div class="col-sm-10">
-			                            <div class="form-group">
-			                                <label class="control-label text-bold">
-			                                	{!! trans('backend.slide.link') !!} <span class="text-danger"> (*)</span>
-			                                </label>
-			                                <input type="text" name="link" class="form-control" value="{{  @old('link') ?? @$slide->link }}" required>
-			                                @if ($errors->has('link'))
-				                            	<p class="text-left text-danger">{{ $errors->first('link') }}</p>
-				                            @endif
-			                            </div>
-			                        </div> 
+			                        {{--<div class="col-sm-10">--}}
+			                            {{--<div class="form-group">--}}
+			                                {{--<label class="control-label text-bold">--}}
+			                                	{{--{!! trans('backend.slide.link') !!} <span class="text-danger"> (*)</span>--}}
+			                                {{--</label>--}}
+			                                {{--<input type="text" name="link" class="form-control" value="{{  @old('link') ?? @$slide->link }}" required>--}}
+			                                {{--@if ($errors->has('link'))--}}
+				                            	{{--<p class="text-left text-danger">{{ $errors->first('link') }}</p>--}}
+				                            {{--@endif--}}
+			                            {{--</div>--}}
+			                        {{--</div> --}}
 
     		                        <div class="col-sm-10">
 			                            <div class="form-group">

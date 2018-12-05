@@ -5,7 +5,19 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
         page: {},
         logo: {},
         banner_home: {},
-        contact: {},
+        description_home: {
+            description_contact: [],
+            description_about: []
+        },
+        lang: JSON.parse(lang),
+        contact: {
+            address: [],
+            phone: [],
+            fax: [],
+            email: [],
+            copy_right: [],
+            google_map: []
+        },
         service: {},
         review: {
             home_image: []
@@ -21,7 +33,7 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
             $settingService.action.getSetting().then(function (resp) {
                 angular.forEach(resp.data, function(value, key){
                     if (value.key == 'CONTACT') {
-                        $scope.data.contact = value.setting
+                        $scope.data.contact = value.setting;
                     }
                     if (value.key == 'SEO_DEFAULT') {
                         $scope.data.seo_default = value.setting
@@ -37,8 +49,8 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
                     if (value.key == 'BANNER') {
                         $scope.data.banner = value.setting
                     }
-
                 });
+                console.log($scope.data.contact);
             }, function (error) {
             })
         },
@@ -124,20 +136,19 @@ ngApp.controller('settingCtrl',function($scope, $myNotify, $myBootbox, $myLoader
 
         saveContact: function () {
             let params = {
-                'setting': JSON.stringify(
-                    {
-                        'address': $scope.data.contact.address || '',
-                        'phone'  : $scope.data.contact.phone || '',
-                        'fax' : $scope.data.contact.fax || '',
-                        'email': $scope.data.contact.email || '',
-                        'copy_right' : $scope.data.contact.copy_right || '',
-                        'google_map' : $scope.data.contact.google_map || '',
-                        'google_analytic': $scope.data.contact.google_analytic || '',
-                        'fb_pixel' : $scope.data.contact.fb_pixel
-                    }
-                ),
+                'setting': JSON.stringify({
+                    'address': $scope.data.contact.address || '',
+                    'phone'  : $scope.data.contact.phone || '',
+                    'fax' : $scope.data.contact.fax || '',
+                    'email': $scope.data.contact.email || '',
+                    'copy_right' : $scope.data.contact.copy_right || '',
+                    'google_map' : $scope.data.contact.google_map || '',
+                    'google_analytic': $scope.data.contact.google_analytic || '',
+                    'fb_pixel' : $scope.data.contact.fb_pixel
+                }),
                 'key' : 'CONTACT'
-            }
+            };
+            console.log($scope.data.contact.email)
             $settingService.action.insertSetting(params).then(function (resp){
                 if (resp) {
                     $myNotify.success('Success')
