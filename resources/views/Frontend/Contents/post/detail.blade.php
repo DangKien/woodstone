@@ -25,7 +25,7 @@
                                 {!! $post->title  !!}
                             </h2>
                             <br>
-                            <div class="row">
+                            <div>
                                 <p>
                                     {!! $post->description  !!}
                                 </p>
