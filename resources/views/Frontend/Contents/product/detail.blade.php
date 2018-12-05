@@ -45,6 +45,9 @@
                             </div>
                             <div role="tabpanel" class="tab-pane" id="featrue">
                                 <p>
+                                    {!! $product->digital_radio !!}
+                                </p>
+                                <p>
                                     {!! $product->specifications !!}
                                 </p>
                                 <p>
