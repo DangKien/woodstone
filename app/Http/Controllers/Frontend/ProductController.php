@@ -21,8 +21,8 @@ class ProductController extends Controller
 
 	    $category = $this->categoryModel::findOrFail($product->category_id);
 	    $categories = $this->categoryModel::where(array(
-		    array('status', StatusConfig::CONST_AVAILABLE),
-	    ))->get();
+							    array('status', StatusConfig::CONST_AVAILABLE),
+						    ))->get();
 
 	    $breadcrumb = $this->_breadcrumb($category, $categories);
 
@@ -47,7 +47,7 @@ class ProductController extends Controller
 										->where(array(
 											array('status', StatusConfig::CONST_AVAILABLE),
 										))->orderBy('id', 'desc')
-										->paginate(1);
+										->paginate(10);
 
 		return view('Frontend.Contents.product.list', array('products' => $products,
 		                                                    'category' => $category,
