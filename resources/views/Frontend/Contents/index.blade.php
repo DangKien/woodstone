@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="img col-md-6 text-center">
-                            <img src="{{ url('Frontend') }}/images/product/img_rolling01.jpg">
+                            <img src="{{ url('').$productHome->image }}">
                         </div>
                     </div>
                 @endforeach
