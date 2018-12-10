@@ -10,10 +10,10 @@
                 @foreach ($categories as $key => $item)
                     @if ($item->parent_id == 0)
                         <div class="footer_bx footer_bx{{ $count+1 }}">
-                            <h3>{{ $item->name }}</h3>
+                            <h3><a href="{{ route('home.categories', [$item->slug, $item->id]) }}">{{ $item->name }}</a></h3>
                             @foreach ($categories as $value)
                                 @if ($value->parent_id == $item->id)
-                                    <h6><span>- {{ $value->name }}</span></h6>
+                                    <a href="{{ route('home.categories', [$value->slug, $value->id]) }}"><h6><span>- {{ $value->name }}</span></h6></a>
                                 @endif
                             @endforeach
                         </div>
